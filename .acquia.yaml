@@ -1,0 +1,4 @@
+build_steps:
+  build:
+    type: make
+    makefile: drupal.make
