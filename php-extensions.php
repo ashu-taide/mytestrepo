@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Performs a simple version check for php plugins.
+ * Performs a simple version check for php extensions.
  *
  * The versions are hard-coded from container specs.
  */
@@ -24,10 +24,11 @@ function get_php_ext_versions() {
     
     $version_matches = strpos($ext_info, $version);
     if ($version_matches === FALSE) {
-      printf("Version check failed for plugin %s. Expected version %s, found version %s.", $extension, $version, $ext_info);
+      printf("Version check failed for extension %s. Expected version %s, found version %s.", $extension, $version, $ext_info);
       exit(1);
     }
   }
+  printf("Version check completed successfully for php extensions.");
 }
 
 get_php_ext_versions();
