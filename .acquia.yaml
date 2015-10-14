@@ -30,4 +30,4 @@ build-steps:
         - echo -e "Checking drush version..."
         - drush --version | grep 6.6.0
         - echo -e "Checking php extension versions..."
-        - php php-extensions.php 
+        - php %SOURCE_DIR%/php-extensions.php 
