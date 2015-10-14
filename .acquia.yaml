@@ -26,7 +26,7 @@ build-steps:
         - echo -e "Checking grunt version..."
         - grunt --version | grep v0.1.13
         - echo -e "Checking bower version..."
-        - bower --version | grep 1.5.1
+        - bower --version | grep 1.5.3
         - echo -e "Checking drush version..."
         - drush --version | grep 6.6.0
         - echo -e "Checking php extension versions..."
