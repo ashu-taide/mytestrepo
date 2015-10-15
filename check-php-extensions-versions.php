@@ -24,11 +24,14 @@ function get_php_ext_versions() {
     
     $version_matches = strpos($ext_info, $version);
     if ($version_matches === FALSE) {
-      printf("Version check failed for extension %s. Expected version %s, found version %s.", $extension, $version, $ext_info);
+      printf("Version check failed for %s. Expected %s, got %s.\n", $extension, $version, $ext_info);
       exit(1);
     }
+    else {
+      printf("Version check completed successfully for %s. Version: %s.\n", $extension, $version);
+    }
   }
-  printf("Version check completed successfully for php extensions.");
+  printf("Version check completed successfully for all php extensions.");
 }
 
 get_php_ext_versions();
