@@ -31,7 +31,7 @@ function get_php_ext_versions() {
       printf("Version check completed successfully for %s. Version: %s.\n", $extension, $version);
     }
   }
-  printf("Version check completed successfully for all php extensions.");
+  printf('Version check completed successfully for all php extensions.');
 }
 
 get_php_ext_versions();
