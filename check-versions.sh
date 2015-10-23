@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env bash
 
 # The arguments are tool name, version string, and expected version.
 echo $2 | grep $3 > /dev/null 2>&1
