@@ -13,6 +13,7 @@ function get_php_ext_versions() {
     'gmp' => '6.0.0',
     'zip' => 'c203148334b6f80d27bc5d23fad5ec3ca7dcf444',
     'mysqli' => '5.0.11-dev - 20120503 - $Id: 3c688b6bbc30d36af3ac34fdd4b7b5b787fe5555',
+    'bz2' => '1.0.6',
   );
 
   foreach ($extensions as $extension => $version) {
