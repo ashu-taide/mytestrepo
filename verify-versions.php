@@ -3,7 +3,9 @@
 /**
  * Performs a simple version check for php extensions.
  *
- * The versions are hard-coded from container specs.
+ * IMPORTANT! This file isn't being used right now. It will eventually become
+ * a replacement for the check-versions.sh and check-php-extensions-versions
+ * .php files.
  */
 function get_php_ext_versions() {
   $extensions = array(
