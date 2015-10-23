@@ -45,6 +45,7 @@ function verify_tool_versions() {
     'nodejs' => 'v0.12.7',
     'git' => '2.1.4',
     'unzip' => '6.00',
+    'unzip' => '1.0.6',
     'gem' => '2.4.8',
     'compass' => '1.0.3',
     'npm' => '2.11.3',

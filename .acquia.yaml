@@ -20,6 +20,8 @@ build-steps:
         - %SOURCE_DIR%/check-versions.sh "git" "$(git --version)" "2.1.4"
         - echo "Checking unzip version..."
         - %SOURCE_DIR%/check-versions.sh "unzip" "$(unzip -v)" "6.00"
+        - echo "Checking unzip version..."
+        - %SOURCE_DIR%/check-versions.sh "bzip2" "$(bzip2 --version 2>&1 | head -n1)" "1.0.6"
         - echo "Checking gem version..."
         - %SOURCE_DIR%/check-versions.sh "gem" "$(gem --version)" "2.4.8"
         - echo "Checking compass version..."
