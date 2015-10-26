@@ -31,7 +31,7 @@ build-steps:
         - echo "Checking grunt version..."
         - %SOURCE_DIR%/check-versions.sh "grunt" "$(grunt --version)" "v0.1.13"
         - echo "Checking bower version..."
-        - %SOURCE_DIR%/check-versions.sh "bower" "$(bower --version)" "1.5.3"
+        - %SOURCE_DIR%/check-versions.sh "bower" "$(bower --version)" "1.6.3"
         - echo "Checking drush version..."
         - %SOURCE_DIR%/check-versions.sh "drush" "$(drush --version)" "6.6.0"
         - echo "Checking php extension versions..."
