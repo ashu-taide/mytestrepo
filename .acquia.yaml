@@ -5,7 +5,7 @@ build-steps:
         - set -e
         - chmod 555 %SOURCE_DIR%/check-versions.sh
         - echo "Checking php version..."
-        - %SOURCE_DIR%/check-versions.sh "php" "$(php --version)" "5.6.15"
+        - %SOURCE_DIR%/check-versions.sh "php" "$(php --version)" "5.6.16"
         - echo "Checking composer version..."
         - %SOURCE_DIR%/check-versions.sh "composer" "$(composer --no-ansi --version)" "1.0-dev"
         - echo "Checking ruby version..."
