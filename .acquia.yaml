@@ -27,7 +27,7 @@ build-steps:
         - echo "Checking compass version..."
         - %SOURCE_DIR%/check-versions.sh "compass" "$(compass --version)" "1.0.3"
         - echo "Checking npm version..."
-        - %SOURCE_DIR%/check-versions.sh "npm" "$(npm --version)" "2.11.3"
+        - %SOURCE_DIR%/check-versions.sh "npm" "$(npm --version)" "2.14.9"
         - echo "Checking grunt version..."
         - %SOURCE_DIR%/check-versions.sh "grunt" "$(grunt --version)" "v0.1.13"
         - echo "Checking bower version..."
