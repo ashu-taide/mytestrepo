@@ -5,7 +5,7 @@ build-steps:
         - set -e
         - chmod 555 %SOURCE_DIR%/check-versions.sh
         - echo "Checking php version..."
-        - %SOURCE_DIR%/check-versions.sh "php" "$(php --version)" "5.6.17"
+        - %SOURCE_DIR%/check-versions.sh "php" "$(php --version)" "5.6.18"
         - echo "Checking composer version..."
         - %SOURCE_DIR%/check-versions.sh "composer" "$(composer --no-ansi --version)" "1.0-dev"
         - echo "Checking ruby version..."
@@ -23,7 +23,7 @@ build-steps:
         - echo "Checking unzip version..."
         - %SOURCE_DIR%/check-versions.sh "bzip2" "$(bzip2 --version 2>&1 | head -n1)" "1.0.6"
         - echo "Checking gem version..."
-        - %SOURCE_DIR%/check-versions.sh "gem" "$(gem --version)" "2.5.1"
+        - %SOURCE_DIR%/check-versions.sh "gem" "$(gem --version)" "2.5.2"
         - echo "Checking compass version..."
         - %SOURCE_DIR%/check-versions.sh "compass" "$(compass --version)" "1.0.3"
         - echo "Checking npm version..."
@@ -31,7 +31,7 @@ build-steps:
         - echo "Checking grunt version..."
         - %SOURCE_DIR%/check-versions.sh "grunt" "$(grunt --version)" "v0.1.13"
         - echo "Checking bower version..."
-        - %SOURCE_DIR%/check-versions.sh "bower" "$(bower --version)" "1.7.2"
+        - %SOURCE_DIR%/check-versions.sh "bower" "$(bower --version)" "1.7.7"
         - echo "Checking drush version..."
         - %SOURCE_DIR%/check-versions.sh "drush" "$(drush --version)" "7.1.0"
         - echo "Checking wget version..."
