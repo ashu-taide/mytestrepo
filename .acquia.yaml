@@ -2,46 +2,37 @@ build-steps:
   - post-build:
       type: script
       script:
-        - set -e
+        - rm /tmp/version_check_failed
         - chmod 555 %SOURCE_DIR%/check-versions.sh
-        - echo "Checking php version..."
         - %SOURCE_DIR%/check-versions.sh "php" "$(php --version)" "5.6.19"
-        - echo "Checking composer version..."
         - %SOURCE_DIR%/check-versions.sh "composer" "$(composer --no-ansi --version)" "1.0-dev"
-        - echo "Checking ruby version..."
         - %SOURCE_DIR%/check-versions.sh "ruby" "$(ruby --version)" "2.1.5"
-        - echo "Checking ssh version..."
         - %SOURCE_DIR%/check-versions.sh "ssh" "$(ssh -V 2>&1)" "OpenSSH_6.7p1"
-        - echo "Checking rsync version..."
         - %SOURCE_DIR%/check-versions.sh "rsync" "$(rsync --version)" "3.1.1"
-        - echo "Checking nodejs version..."
         - %SOURCE_DIR%/check-versions.sh "nodejs" "$(nodejs --version)" "v4.3.2"
-        - echo "Checking git version..."
         - %SOURCE_DIR%/check-versions.sh "git" "$(git --version)" "2.1.4"
-        - echo "Checking unzip version..."
         - %SOURCE_DIR%/check-versions.sh "unzip" "$(unzip -v)" "6.00"
-        - echo "Checking unzip version..."
         - %SOURCE_DIR%/check-versions.sh "bzip2" "$(bzip2 --version 2>&1 | head -n1)" "1.0.6"
-        - echo "Checking gem version..."
         - %SOURCE_DIR%/check-versions.sh "gem" "$(gem --version)" "2.6.1"
-        - echo "Checking compass version..."
         - %SOURCE_DIR%/check-versions.sh "compass" "$(compass --version)" "1.0.3"
-        - echo "Checking npm version..."
         - %SOURCE_DIR%/check-versions.sh "npm" "$(npm --version)" "2.14.12"
-        - echo "Checking grunt version..."
         - %SOURCE_DIR%/check-versions.sh "grunt" "$(grunt --version)" "v0.1.13"
-        - echo "Checking bower version..."
         - %SOURCE_DIR%/check-versions.sh "bower" "$(bower --version)" "1.7.7"
-        - echo "Checking drush versions..."
-        - %SOURCE_DIR%/check-versions.sh "drush" "$(drush --version)" "7.1.0"
-        - %SOURCE_DIR%/check-versions.sh "drush" "$(drush6 --version)" "6.7.0"
-        - %SOURCE_DIR%/check-versions.sh "drush" "$(drush7 --version)" "7.1.0"
-        - %SOURCE_DIR%/check-versions.sh "drush" "$(drush8 --version)" "8.0.3"
-        - echo "Checking wget version..."
+        - %SOURCE_DIR%/check-versions.sh "drush default" "$(drush --version)" "7.1.0"
+        - %SOURCE_DIR%/check-versions.sh "drush6" "$(drush6 --version)" "6.7.0"
+        - %SOURCE_DIR%/check-versions.sh "drush7" "$(drush7 --version)" "7.1.0"
+        - %SOURCE_DIR%/check-versions.sh "drush8" "$(drush8 --version)" "8.0.3"
         - %SOURCE_DIR%/check-versions.sh "wget" "$(wget --version)" "1.16"
-        - echo "Checking patch version..."
         - %SOURCE_DIR%/check-versions.sh "patch" "$(patch --version)" "2.7.5"
         - echo "Checking php extension versions..."
         - php %SOURCE_DIR%/check-php-extensions-versions.php
-        - echo "Checking for the php pcntl extension."
-        - php -m | grep pcntl # The PHP pcntl extension does not have a version string.
+        - 
+        - # The PHP pcntl extension does not have a version string.
+        - %SOURCE_DIR%/check-versions.sh "php pcntl extension" "$(php -m)" "pcntl"
+        -
+        - # Fail this test if there were any failures.
+        - if [ -f /tmp/version_check_failed ]; then
+        -   echo "Failures in the version check:
+        -   cat /tmp/version_check_failed
+        -   exit 1
+        - fi

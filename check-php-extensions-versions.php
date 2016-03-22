@@ -25,14 +25,16 @@ function get_php_ext_versions() {
 
     $version_matches = strpos($ext_info, $version);
     if ($version_matches === FALSE) {
-      printf("Version check failed for %s. Expected %s, got %s.\n", $extension, $version, $ext_info);
-      exit(1);
+      $message = sprintf("Version check failed for %s. Expected %s, got %s.\n", $extension, $version, $ext_info);
+      file_put_contents('/tmp/version_check_failed', $message, FILE_APPEND);
     }
     else {
-      printf("Version check completed successfully for %s. Version: %s.\n", $extension, $version);
+      $message = sprintf("Version check completed successfully for %s. Version: %s.\n", $extension, $version);
+      file_put_contents('/tmp/version_check_success', $message, FILE_APPEND);
+      print($message);
     }
   }
-  printf('Version check completed successfully for all php extensions.');
+  printf('Version check completed for all php extensions.');
 }
 
 get_php_ext_versions();
