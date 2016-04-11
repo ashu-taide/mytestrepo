@@ -5,6 +5,7 @@ build-steps:
         - rm -f /tmp/version_check_failed
         - chmod 555 %SOURCE_DIR%/check-versions.sh
         - %SOURCE_DIR%/check-versions.sh "php" "$(php --version)" "5.6.19"
+        - %SOURCE_DIR%/check-versions.sh "acquia-yaml" "$(gem list acquia-yaml)" "1.0.1"
         - %SOURCE_DIR%/check-versions.sh "composer" "$(composer --no-ansi --version)" "1.0-dev"
         - %SOURCE_DIR%/check-versions.sh "ruby" "$(ruby --version)" "2.1.5"
         - %SOURCE_DIR%/check-versions.sh "ssh" "$(ssh -V 2>&1)" "OpenSSH_6.7p1"
