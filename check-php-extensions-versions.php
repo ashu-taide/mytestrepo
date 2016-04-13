@@ -11,7 +11,7 @@ function get_php_ext_versions() {
     'pdo_mysql' => '5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a',
     'mcrypt' => '2.5.8',
     'gmp' => '6.0.0',
-    'zip' => 'ccd0467fd353f0f5c2d8834a51ab217aa6053e0d',
+    'zip' => '1.12.5',
     'mysqli' => '5.0.11-dev - 20120503 - $Id: 76b08b24596e12d4553bd41fc93cccd5bac2fe7a',
     'bz2' => '1.0.6',
   );
