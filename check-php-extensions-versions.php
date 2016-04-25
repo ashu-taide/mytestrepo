@@ -26,7 +26,7 @@ function get_php_ext_versions() {
     $version_matches = strpos($ext_info, $version);
     if ($version_matches === FALSE) {
       $message = sprintf("Version check failed for %s. Expected %s, got %s.\n", $extension, $version, $ext_info);
-      file_put_contents('/tmp/version_check_failed', $message, FILE_APPEND);
+      file_put_contents('/tmp/version_check_failure', $message, FILE_APPEND);
     }
     else {
       $message = sprintf("Version check completed successfully for %s. Version: %s.\n", $extension, $version);

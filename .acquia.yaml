@@ -2,7 +2,7 @@ build-steps:
   - post-build:
       type: script
       script:
-        - rm -f /tmp/version_check_failed
+        - rm -f /tmp/version_check_failure
         - chmod 555 %SOURCE_DIR%/check-versions.sh
         - %SOURCE_DIR%/check-versions.sh "php" "$(php --version)" "5.6.19"
         - %SOURCE_DIR%/check-versions.sh "acquia-yaml" "$(gem list acquia-yaml)" "1.0.1"
@@ -32,8 +32,8 @@ build-steps:
         - %SOURCE_DIR%/check-versions.sh "php pcntl extension" "$(php -m)" "pcntl"
         - 
         - # Fail this test if there were any failures.
-        - if [ -f /tmp/version_check_failed ]; then
+        - if [ -f /tmp/version_check_failure ]; then
         -   echo "Failures in the version check:"
-        -   cat /tmp/version_check_failed
+        -   cat /tmp/version_check_failure
         -   exit 1
         - fi
