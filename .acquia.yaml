@@ -1,0 +1,31 @@
+---
+version: 0.2.0
+strict_mode: true
+steps:
+- name: post-build
+  type: script
+  script:
+  - set -ex
+  - env
+  - echo "Testing env vars"
+  - 'echo "CI=" : ${CI?"Need to set CI"}'
+  - 'echo "CONTINUOUS_INTEGRATION=" : ${CONTINUOUS_INTEGRATION?"Need to set CONTINUOUS_INTEGRATION"}'
+  - 'echo "PIPELINE_STATUS=" : ${PIPELINE_STATUS?"Need to set PIPELINE_STATUS"}'
+  - 'echo "PIPELINE_ENV=" : ${PIPELINE_ENV?"Need to set ENV"}'
+  - 'echo "PIPELINE_APPLICATION_ID=" : ${PIPELINE_APPLICATION_ID?"Need to set PIPELINE_APPLICATION_ID"}'
+  - 'echo "PIPELINE_JOB_ID=" : ${PIPELINE_JOB_ID?"Need to set PIPELINE_JOB_ID"}'
+  - 'echo "PIPELINE_VCS_PATH=" : ${PIPELINE_VCS_PATH?"Need to set PIPELINE_VCS_PATH"}'
+  - 'echo "PIPELINE_DEPLOY_VCS_PATH=" : ${PIPELINE_DEPLOY_VCS_PATH?"Need to set PIPELINE_DEPLOY_VCS_PATH"}'
+  - 'echo "PIPELINE_CLOUD_REALM=" : ${PIPELINE_CLOUD_REALM?"Need to set PIPELINE_CLOUD_REALM"}'
+  - 'echo "PIPELINE_CLOUD_SITE=" : ${PIPELINE_CLOUD_SITE?"Need to set PIPELINE_CLOUD_SITE"}'
+  - 'echo "PIPELINE_CLOUD_ENV=" : ${PIPELINE_CLOUD_ENV?"Need to set PIPELINE_CLOUD_ENV"}'
+  - 'echo "PIPELINE_GIT_HEAD_REF=" : ${PIPELINE_GIT_HEAD_REF?"Need to set PIPELINE_GIT_HEAD_REF"}'
+  - echo "Testing mysql"
+  - sudo /etc/init.d/mysql status | grep "MySQL is stopped"
+  - sudo /etc/init.d/mysql start
+  - sudo /etc/init.d/mysql status || false
+  - mysqladmin -uroot -proot create test_database
+  - "echo 'SHOW DATABASES' | mysql -uroot -proot | grep test_database "
+  - 'echo "CREATE TABLE test_table (c1 INT NOT NULL AUTO_INCREMENT PRIMARY KEY, c2 VARCHAR(100));" | mysql -uroot -proot test_database'
+  - 'echo "INSERT INTO test_table VALUES (NULL, \"buildsteps\");" | mysql -uroot -proot test_database'
+  - 'echo "SELECT * FROM test_table;" | mysql -uroot -proot test_database | grep buildsteps'
