@@ -24,7 +24,7 @@ build-steps:
         - $SOURCE_DIR/check-versions.sh "drush7" "$(drush7 --version)" "7.3.0"
         - $SOURCE_DIR/check-versions.sh "drush8" "$(drush8 --version)" "8.0.3"
         - $SOURCE_DIR/check-versions.sh "wget" "$(wget --version)" "1.16"
-        - $SOURCE_DIR/check-versions.sh "mysql" "$(mysql --version)" "5.5.49"
+        - $SOURCE_DIR/check-versions.sh "mysql" "$(mysql --version)" "5.5.50"
         - $SOURCE_DIR/check-versions.sh "patch" "$(patch --version)" "2.7.5"
         -
         - echo "Checking php extension versions..."
