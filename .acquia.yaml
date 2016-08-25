@@ -26,6 +26,7 @@ build-steps:
         - $SOURCE_DIR/check-versions.sh "wget" "$(wget --version)" "1.16"
         - $SOURCE_DIR/check-versions.sh "mysql" "$(mysql --version)" "5.5.50"
         - $SOURCE_DIR/check-versions.sh "patch" "$(patch --version)" "2.7.5"
+        - $SOURCE_DIR/check-versions.sh "nvm" "$(nvm --version)" "0.31.6"
         -
         - echo "Checking php extension versions..."
         - php $SOURCE_DIR/check-php-extensions-versions.php
