@@ -32,6 +32,7 @@ build-steps:
         - # The PHP pcntl extension does not have a version string.
         - $SOURCE_DIR/check-versions.sh "php pcntl extension" "$(php -m)" "pcntl"
         - $SOURCE_DIR/check-versions.sh "php bcmath extension" "$(php -m)" "bcmath"
+        - $SOURCE_DIR/check-versions.sh "php xsl extension" "$(php -m)" "xsl"
         -
         - # Fail this test if there were any failures.
         - if [ -f /tmp/version_check_failure ]; then
