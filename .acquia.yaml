@@ -30,3 +30,5 @@ events:
             - 'echo "CREATE TABLE test_table (c1 INT NOT NULL AUTO_INCREMENT PRIMARY KEY, c2 VARCHAR(100));" | mysql -uroot -proot test_database'
             - 'echo "INSERT INTO test_table VALUES (NULL, \"buildsteps\");" | mysql -uroot -proot test_database'
             - 'echo "SELECT * FROM test_table;" | mysql -uroot -proot test_database | grep buildsteps'
+            - echo $MY_VAR_3
+            - echo $MY_VAR_4
