@@ -4,21 +4,17 @@ build-steps:
       script:
         - rm -f /tmp/version_check_failure
         - chmod 555 $SOURCE_DIR/check-versions.sh
-        - $SOURCE_DIR/check-versions.sh "php" "$(php --version)" "5.6.26"
+        - $SOURCE_DIR/check-versions.sh "php" "$(php --version)" "5.6.27"
         - $SOURCE_DIR/check-versions.sh "acquia-yaml" "$(gem list acquia-yaml)" "1.0.4"
         - $SOURCE_DIR/check-versions.sh "composer" "$(composer --no-ansi --version)" "1.2.1"
-        - $SOURCE_DIR/check-versions.sh "ruby" "$(ruby --version)" "2.1.5"
         - $SOURCE_DIR/check-versions.sh "ssh" "$(ssh -V 2>&1)" "OpenSSH_6.7p1"
         - $SOURCE_DIR/check-versions.sh "rsync" "$(rsync --version)" "3.1.1"
-        - $SOURCE_DIR/check-versions.sh "nodejs" "$(nodejs --version)" "v4.6.0"
+        - $SOURCE_DIR/check-versions.sh "nodejs" "$(nodejs --version)" "v4.6.1"
         - $SOURCE_DIR/check-versions.sh "git" "$(git --version)" "2.1.4"
         - $SOURCE_DIR/check-versions.sh "unzip" "$(unzip -v)" "6.00"
         - $SOURCE_DIR/check-versions.sh "bzip2" "$(bzip2 --version 2>&1 | head -n1)" "1.0.6"
         - $SOURCE_DIR/check-versions.sh "gem" "$(gem --version)" "2.6.7"
-        - $SOURCE_DIR/check-versions.sh "compass" "$(compass --version)" "1.0.3"
         - $SOURCE_DIR/check-versions.sh "npm" "$(npm --version)" "2.15.9"
-        - $SOURCE_DIR/check-versions.sh "grunt" "$(grunt --version)" "v1.2.0"
-        - $SOURCE_DIR/check-versions.sh "bower" "$(bower --version)" "1.7.9"
         - $SOURCE_DIR/check-versions.sh "drush default" "$(drush --version)" "7.4.0"
         - $SOURCE_DIR/check-versions.sh "drush6" "$(drush6 --version)" "6.7.0"
         - $SOURCE_DIR/check-versions.sh "drush7" "$(drush7 --version)" "7.4.0"
@@ -26,7 +22,12 @@ build-steps:
         - $SOURCE_DIR/check-versions.sh "wget" "$(wget --version)" "1.16"
         - $SOURCE_DIR/check-versions.sh "mysql" "$(mysql --version)" "5.5.52"
         - $SOURCE_DIR/check-versions.sh "patch" "$(patch --version)" "2.7.5"
-        - $SOURCE_DIR/check-versions.sh "nvm" "$(nvm --version)" "0.32.0"
+        - $SOURCE_DIR/check-versions.sh "nvm" "$(nvm --version)" "0.32.1"
+        - $SOURCE_DIR/check-versions.sh "rvm" "$(rvm --version)" "1.27.0"
+        - $SOURCE_DIR/check-versions.sh "rvm" "$(rvm list)" "ruby-2.1.8"
+        - $SOURCE_DIR/check-versions.sh "rvm" "$(rvm list)" "ruby-2.2.4"
+        - $SOURCE_DIR/check-versions.sh "rvm" "$(rvm list)" "ruby-2.3.0"
+        - $SOURCE_DIR/check-versions.sh "bundler" "$(bundler --version)" "1.13.6"
         -
         - echo "Checking php extension versions..."
         - php $SOURCE_DIR/check-php-extensions-versions.php
