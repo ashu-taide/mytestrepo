@@ -25,7 +25,7 @@ events:
             - sudo /etc/init.d/mysql status | grep "MySQL is stopped"
             - sudo /etc/init.d/mysql start || echo "mysql is already running"
             - sudo /etc/init.d/mysql status || false
-            - mysqladmin -uroot -proot create test_database
+            - "mysqladmin -uroot -proot create test_database || (history; mysql -uroot -proot -e 'show tables from test_database;'; false)"
             - "echo 'SHOW DATABASES' | mysql -uroot -proot | grep test_database "
             - 'echo "CREATE TABLE test_table (c1 INT NOT NULL AUTO_INCREMENT PRIMARY KEY, c2 VARCHAR(100));" | mysql -uroot -proot test_database'
             - 'echo "INSERT INTO test_table VALUES (NULL, \"buildsteps\");" | mysql -uroot -proot test_database'
