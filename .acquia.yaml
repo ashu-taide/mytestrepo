@@ -28,6 +28,7 @@ build-steps:
         - $SOURCE_DIR/check-versions.sh "rvm" "$(rvm list)" "ruby-2.2.4"
         - $SOURCE_DIR/check-versions.sh "rvm" "$(rvm list)" "ruby-2.3.0"
         - $SOURCE_DIR/check-versions.sh "bundler" "$(bundler --version)" "1.13.6"
+        - $SOURCE_DIR/check-versions.sh "fontconfig" "$(fc-list --version)" "2.11.0"
         -
         - echo "Checking php extension versions..."
         - php $SOURCE_DIR/check-php-extensions-versions.php
