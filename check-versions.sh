@@ -2,7 +2,7 @@
 
 # The arguments are tool name, version string, and expected version.
 echo -n "Checking ${1} version..."
-echo $2 | grep $3 > /dev/null 2>&1
+echo -e $2 | grep $3 > /dev/null 2>&1
 exit_code=$?
 
 if [[ $exit_code -ne 0 ]]
