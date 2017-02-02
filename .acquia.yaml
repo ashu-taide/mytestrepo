@@ -19,7 +19,6 @@ events:
             - 'echo "PIPELINE_DEPLOY_VCS_PATH=" : ${PIPELINE_DEPLOY_VCS_PATH?"Need to set PIPELINE_DEPLOY_VCS_PATH"}'
             - 'echo "PIPELINE_CLOUD_REALM=" : ${PIPELINE_CLOUD_REALM?"Need to set PIPELINE_CLOUD_REALM"}'
             - 'echo "PIPELINE_CLOUD_SITE=" : ${PIPELINE_CLOUD_SITE?"Need to set PIPELINE_CLOUD_SITE"}'
-            - 'echo "PIPELINE_CLOUD_ENV=" : ${PIPELINE_CLOUD_ENV?"Need to set PIPELINE_CLOUD_ENV"}'
             - 'echo "PIPELINE_GIT_HEAD_REF=" : ${PIPELINE_GIT_HEAD_REF?"Need to set PIPELINE_GIT_HEAD_REF"}'
             - echo "Testing mysql"
             - sudo /etc/init.d/mysql status | grep "MySQL is stopped"
