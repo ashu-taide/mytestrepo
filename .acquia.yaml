@@ -21,7 +21,7 @@ events:
             - 'echo "PIPELINE_CLOUD_SITE=" : ${PIPELINE_CLOUD_SITE?"Need to set PIPELINE_CLOUD_SITE"}'
             - 'echo "PIPELINE_GIT_HEAD_REF=" : ${PIPELINE_GIT_HEAD_REF?"Need to set PIPELINE_GIT_HEAD_REF"}'
             - echo "Testing mysql"
-            - sudo /etc/init.d/mysql status | grep "MySQL is stopped"
+            - sudo /etc/init.d/mysql status | grep "is not running"
             - sudo /etc/init.d/mysql start || echo "mysql is already running"
             - sudo /etc/init.d/mysql status || false
             - "mysqladmin -uroot -proot create test_database || (history; mysql -uroot -proot -e 'show tables from test_database;'; false)"
