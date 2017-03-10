@@ -47,6 +47,7 @@ events:
             - nvm install 4.4.1
             - nvm use 4.4.1
             - npm install color
+            - find . -name ".git" -type d -exec rm -r "{}" +
       - background-check:
           type: script
           script:
