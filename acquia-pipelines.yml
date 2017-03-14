@@ -62,6 +62,7 @@ events:
           type: script
           script:
             - 'echo "Executing custom event"'
+            - 'echo "I have slashes"'
   post-deploy:
     steps:
       - cat:
