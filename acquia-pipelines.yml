@@ -50,6 +50,8 @@ events:
             - nvm use 4.4.1
             - npm install color
             - find . -name ".git" -type d -exec rm -r "{}" +
+            - 'echo "Testing Memory Monitor"'
+            - pipelines-memory-monitor-status || echo "Could not locate the memory monitor status command"
       - background-check:
           type: script
           script:
