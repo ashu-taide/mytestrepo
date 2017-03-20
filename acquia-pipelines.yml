@@ -30,6 +30,8 @@ events:
             - 'echo "Testing custom ENV vars"'
             - echo $MY_VAR_3
             - echo $MY_VAR_4
+            - 'echo "Testing persisting env vars across events"'
+            - "echo '{ \"environment\": { \"new_var_1\":\"new_val_1\" } }' > \"${PIPELINES_SCRIPT_DATA_FILE}\""
             - echo "Testing mysql service"
             - sudo /etc/init.d/mysql status || false
             - mysqladmin -uroot -proot create test_database
@@ -69,3 +71,4 @@ events:
          type: script
          script:
          - echo 'Executing post-deploy event'
+         - 'echo "new_var_1=" : ${new_var_1?"Need to set new_var_1"}'
