@@ -20,7 +20,7 @@ build-steps:
         - $SOURCE_DIR/check-versions.sh "drush7" "$(drush7 --version)" "7.4.0"
         - $SOURCE_DIR/check-versions.sh "drush8" "$(drush8 --version)" "8.1.10"
         - $SOURCE_DIR/check-versions.sh "wget" "$(wget --version)" "1.16"
-        - $SOURCE_DIR/check-versions.sh "mysql" "$(mysql --version)" "5.6.35"
+        - $SOURCE_DIR/check-versions.sh "mysql" "$(mysql --version)" "5.6.36"
         - $SOURCE_DIR/check-versions.sh "patch" "$(patch --version)" "2.7.5"
         - $SOURCE_DIR/check-versions.sh "nvm" "$(nvm --version)" "0.33.1"
         - $SOURCE_DIR/check-versions.sh "rbenv" "$(rbenv -v)" "1.1.0"
