@@ -1,5 +1,8 @@
 ---
 version: 1.0.0
+ssh-keys:
+  acquia_chromium_tests: 
+    secure: 2acRlTQ5dQrPRASsITjj5pKuMEwLOKfJMc4a0ni6/yds9ngrryqYhUpyfeIMvvJf98n87o0K35wkv2KjLulEzO7HJjObmdq+/S2QjtKG0AyUge+EWTT6RdpFwCDywEgWjSkT5pzYhi90/6RQqaRji5xN4C6pA642VG56F7a6E+xfQWkoonrc6rjFprkBW7dx802lA03AgzSo0WRxTuLrh3ygGT6Mb5miaBhcUPdTA0CWcFZjCOXyYogfXso9r6hIE5qAxyQ9j88JqCxE7HKwmk9g4dKAJ2x9UBhYW6dvMPDzU9VNewR2mblfrChFBXUO5rO2yRYeawTeNiygYpuFXiFqfQupYl2Ch4XjSBqHKV4GPKS3AeSdLSmkD2gukIvVPwozasqfMSSNf826OFoSKbSiioDuEWg8VM9lobIkhEjJUk+aLJtN6hKYThoU1ndKvvULaQgoaD881duqpgHfTr+qosYhcbMuGHBLuJpJyPMw4yjNKalWRF9RecR0rZ5BqRAvLLueqDo5wFiXkB5QQeQOybSU80NpEuHJYKG9bJmLcfu/qH0GeWI6mJu5n4WCFD9egCM6PXUDG7y7Ubk0wYDKGbJPzdvbfAPB+WvG7lhwaTiVEBEtAKed59sQkzZpQ1kxwc+mqVE8yaXw+SRdKICLcVBSZsbLDBzNcm+Nju33ig=scVkMAnYfTsnhXkekw7Necg8/EUyfg57cu3Uh/tAWu9mBWDAQAGquZGRKISppwHnGVyJOouqI5SQhdvb1PX4Rvjhubo3QssChUmKRsBEA0+IEAg/TJbqS6023Jwxq1zGNOfMLtl9LdUMjs8l+QbM/F6dznxBgv3FXKVm4yh1d6vdcvT8EfH3/Xha9nNybPa7htS9X/Ayjy7w0xg0WoTXzSuOaVqit6y8xuCpyj7WyDQFr/i0JnaGq7nHrRJ6APdb/GEVcA43cQMFAD9U34ptLVE8fVJm8ZufcnjfabN9jnX0mmcSORe/QR1yQzErmyYmIR/369UPfnOQ5QcphoBqbc2wh5JM/3bAxnsME7oaGV69ZDK4n4wWm+JmRcBjONqAjy3kvud1CK7t3195+/NHae1XtljsHSUmn4AucS0uC2OnHizzBujaUiq5w/z+yAhMDfdgxQRG6IUGVGn1PjnRzH3uIgoL/yT2Sgxf5ChyH/k03jepMEoEFQ8jEtbpW4u/02IxpIXg5Qtrur/6jDIITOPOU0MzSIOX44BIzkCKN3BaGXl8Y4E3ZwItbqeB0NKcCMPUYrsI1Ewmq5oosaoxDbrseL3MS2hM73hkH9+K1brvLIsZ0qub2cNHjw3CW6g8FwR8G4xpOH/ya5GD3vSpdVdDb/rf+sX+i63/CXiAxvRNnR6vd/cshL1wpgkVxl4Mey4kT3QFnra/HabDDHZFtFpWomk0hc/AEegU/Yyq2lxwL9AYHYiZlpAiNk6HjnXw4MB9TnYKUdhTDEv3cFdJS/R6Lb9BVDsKtI/pg91yeoQ1tJVOLoaWL+eMehEjZiZTz+04T+ck8UoCsgrdynQVTFlQE8WlvToQ43+GUO6wGumbE2IAp3y8c7TBF0oO3kO++6rMdCFnCO7qAt0+6TI84QfeHjEI1FEqgAEiDyfJzhatc8lRmgQatw4wWOD2rkl7Jz6V1G6mNosVoKpexIZuibG2Tqq+rfFCBlN59zMyykNND2faed394mm5P/Om3m8UyV/Bkp+N40TTzjKottdXHJqhkGJZSKEwUNLZyC74lJFOYT6bm2+kdzUKN0yUKk36SPzxWT7Kz2NL/7LB0nSmhA==
 services:
   - mysql
 events:
@@ -51,8 +54,8 @@ events:
             - php -i | grep variables_order
             - 'echo "Testing headless chrome browser"'
             - google-chrome --version
-            - git clone https://github.com/fsmawi/scotch-angular-testing.git
-            - cd scotch-angular-testing && npm install && node_modules/karma-cli/bin/karma start --single-run
+            - git clone git@github.com:acquia/headless-chrome-test.git
+            - cd headless-chrome-test && npm install && node_modules/karma-cli/bin/karma start --single-run
       - background-check:
           type: script
           script:
