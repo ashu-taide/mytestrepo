@@ -51,6 +51,8 @@ events:
             - php -i | grep variables_order
             - 'echo "Testing headless chrome browser"'
             - google-chrome --version
+            - git clone https://github.com/fsmawi/scotch-angular-testing.git
+            - cd scotch-angular-testing && npm install && node_modules/karma-cli/bin/karma start --single-run
       - background-check:
           type: script
           script:
