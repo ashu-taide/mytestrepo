@@ -54,7 +54,6 @@ events:
             - php -i | grep variables_order
             - 'echo "Testing headless chrome browser"'
             - google-chrome --version
-            - git clone git@github.com:acquia/headless-chrome-test.git
             - cd headless-chrome-test && npm install && node_modules/karma-cli/bin/karma start --single-run
       - background-check:
           type: script
