@@ -53,7 +53,6 @@ events:
             - sudo /usr/local/src/pipelines-logtailor/bin/validate_cert /etc/pipelines_config/ssl.cert /etc/pipelines_config/ssl.key
             - 'echo "Testing headless chrome browser"'
             - google-chrome --version
-            - git clone git@github.com:acquia/headless-chrome-test.git
             - cd headless-chrome-test && npm install && node_modules/karma-cli/bin/karma start --single-run
       - background-check:
           type: script
