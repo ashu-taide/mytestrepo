@@ -15,6 +15,7 @@ function get_php_ext_versions() {
     'mysqli' => '5.0.12-dev - 20150407 - $Id: b396954eeb2d1d9ed7902b8bae237b287f21ad9e',
     'bz2' => '1.0.6',
     'imagick' => '3.4.3',
+    'curl' => '7.38.0',
   );
 
   foreach ($extensions as $extension => $version) {
