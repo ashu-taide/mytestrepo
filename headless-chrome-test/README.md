@@ -5,4 +5,4 @@
 
 ### Test
 
-`node_modules/karma-cli/bin/karma start`
+`node_modules/karma-cli/bin/karma start --single-run`
