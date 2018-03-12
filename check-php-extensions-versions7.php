@@ -8,11 +8,11 @@
 function get_php_ext_versions() {
   $extensions = array(
     'gd' => '2.1.1-dev',
-    'pdo_mysql' => '5.0.12-dev - 20150407 - $Id: b396954eeb2d1d9ed7902b8bae237b287f21ad9e',
+    'pdo_mysql' => '5.0.12-dev - 20150407 - $Id: 38fea24f2847fa7519001be390c98ae0acafe387',
     'mcrypt' => '2.5.8',
     'gmp' => '6.0.0',
     'zip' => '1.13.5',
-    'mysqli' => '5.0.12-dev - 20150407 - $Id: b396954eeb2d1d9ed7902b8bae237b287f21ad9e',
+    'mysqli' => '5.0.12-dev - 20150407 - $Id: 38fea24f2847fa7519001be390c98ae0acafe387',
     'bz2' => '1.0.6',
     'imagick' => '3.4.3',
     'curl' => '7.38.0',
