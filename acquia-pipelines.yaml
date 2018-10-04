@@ -6,8 +6,8 @@ events:
           script:
             - 'rm -f /tmp/version_check_failure'
             - 'chmod 555 $SOURCE_DIR/check-versions.sh'
-            - '$SOURCE_DIR/check-versions.sh "php" "$(php --version)" "5.6.37"'
-            - '$SOURCE_DIR/check-versions.sh "php7.1" "$(php7.1 --version)" "7.1.20"'
+            - '$SOURCE_DIR/check-versions.sh "php" "$(php --version)" "5.6.38"'
+            - '$SOURCE_DIR/check-versions.sh "php7.1" "$(php7.1 --version)" "7.1.22"'
             - '$SOURCE_DIR/check-versions.sh "acquia-yaml" "$(gem list acquia-yaml)" "1.0.4"'
             - '$SOURCE_DIR/check-versions.sh "composer" "$(composer --no-ansi --version)" "1.7.2"'
             - '$SOURCE_DIR/check-versions.sh "ssh" "$(ssh -V 2>&1)" "OpenSSH_6.7p1"'
