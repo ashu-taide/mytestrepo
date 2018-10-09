@@ -30,7 +30,7 @@ events:
             - '$SOURCE_DIR/check-versions.sh "rbenv" "$(rbenv -v)" "1.1.1"'
             - '$SOURCE_DIR/check-versions.sh "rbenv 2.3.x" "$(rbenv versions)" "2.3.7"'
             - '$SOURCE_DIR/check-versions.sh "rbenv 2.4.x" "$(rbenv versions)" "2.4.4"'
-            - '$SOURCE_DIR/check-versions.sh "bundler" "$(bundle --version)" "1.16.5"'
+            - '$SOURCE_DIR/check-versions.sh "bundler" "$(bundle --version)" "1.16.6"'
             - '$SOURCE_DIR/check-versions.sh "fontconfig" "$(fc-list --version 2>&1)" "2.11.0"'
             - '$SOURCE_DIR/check-versions.sh "imagemagick" "$(convert --version 2>&1)" "6.8.9-9"'
             - 'echo "Checking php extension versions..."'
