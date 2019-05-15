@@ -15,6 +15,7 @@ function get_php_ext_versions() {
     'bz2' => '1.0.6',
     'imagick' => '3.4.3',
     'curl' => '7.47.0',
+    'memcached' => '3.1.3',
   );
 
   foreach ($extensions as $extension => $version) {
