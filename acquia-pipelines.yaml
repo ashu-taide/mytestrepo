@@ -8,6 +8,7 @@ events:
             - 'chmod 555 $SOURCE_DIR/check-versions.sh'
             - '$SOURCE_DIR/check-versions.sh "php" "$(php --version)" "7.1.30"'
             - '$SOURCE_DIR/check-versions.sh "php7.2" "$(php7.2 --version)" "7.2.19"'
+            - '$SOURCE_DIR/check-versions.sh "php7.3" "$(php7.3 --version)" "7.3.6"'
             - '$SOURCE_DIR/check-versions.sh "acquia-yaml" "$(gem list acquia-yaml)" "1.0.4"'
             - '$SOURCE_DIR/check-versions.sh "composer" "$(composer --no-ansi --version)" "1.8.6"'
             - '$SOURCE_DIR/check-versions.sh "ssh" "$(ssh -V 2>&1)" "OpenSSH_7.2p2"'
@@ -37,6 +38,7 @@ events:
             - 'echo "Checking php extension versions..."'
             - 'php $SOURCE_DIR/check-php-extensions-versions.php'
             - 'php7.2 $SOURCE_DIR/check-php72-extensions-versions.php'
+            - 'php7.3 $SOURCE_DIR/check-php73-extensions-versions.php'
             # The PHP pcntl extension does not have a version string.
             - '$SOURCE_DIR/check-versions.sh "php pcntl extension" "$(php -m)" "pcntl"'
             - '$SOURCE_DIR/check-versions.sh "php bcmath extension" "$(php -m)" "bcmath"'
@@ -44,6 +46,9 @@ events:
             - '$SOURCE_DIR/check-versions.sh "php7.2 pcntl extension" "$(php7.2 -m)" "pcntl"'
             - '$SOURCE_DIR/check-versions.sh "php7.2 bcmath extension" "$(php7.2 -m)" "bcmath"'
             - '$SOURCE_DIR/check-versions.sh "php7.2 xsl extension" "$(php7.2 -m)" "xsl"'
+            - '$SOURCE_DIR/check-versions.sh "php7.3 pcntl extension" "$(php7.3 -m)" "pcntl"'
+            - '$SOURCE_DIR/check-versions.sh "php7.3 bcmath extension" "$(php7.3 -m)" "bcmath"'
+            - '$SOURCE_DIR/check-versions.sh "php7.3 xsl extension" "$(php7.3 -m)" "xsl"'
             # Fail this test if there were any failures.
             - 'if [ -f /tmp/version_check_failure ]; then'
             -   'echo "Failures in the version check:"'
