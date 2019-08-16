@@ -40,8 +40,8 @@ events:
             - 'echo "SELECT * FROM test_table;" | mysql -uroot -proot test_database | grep buildsteps'
             - 'echo "Testing NVM"'
             - nvm --version
-            - nvm install 4.4.1
-            - nvm use 4.4.1
+            - nvm install v8.11.1
+            - nvm use 8.11.1
             - npm install color
             - find . -name ".git" -type d -exec rm -r "{}" +
             - 'echo "Testing Memory Monitor"'
