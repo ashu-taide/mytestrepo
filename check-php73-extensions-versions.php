@@ -13,7 +13,7 @@ function get_php_ext_versions() {
     'zip' => '1.15.4',
     'mysqli' => '5.0.12-dev - 20150407 - $Id: 7cc7cc96e675f6d72e5cf0f267f48e167c2abb23',
     'bz2' => '1.0.6',
-    'imagick' => '3.4.3',
+    'imagick' => '3.4.4',
     'curl' => '7.47.0',
     'memcached' => '3.1.3',
   );

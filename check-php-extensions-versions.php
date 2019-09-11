@@ -14,7 +14,7 @@ function get_php_ext_versions() {
     'zip' => '1.13.5',
     'mysqli' => '5.0.12-dev - 20150407 - $Id: 38fea24f2847fa7519001be390c98ae0acafe387',
     'bz2' => '1.0.6',
-    'imagick' => '3.4.3',
+    'imagick' => '3.4.4',
     'curl' => '7.47.0',
     'memcached' => '3.1.3',
   );
