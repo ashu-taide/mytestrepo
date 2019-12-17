@@ -1,0 +1,77 @@
+#############################
+# Packages
+#############################
+php;PHP\s((\d+\.){2}\d+);;
+php7.2;PHP\s((\d+\.){2}\d+);;
+php7.3;PHP\s((\d+\.){2}\d+);;
+acquia-yaml;;gem list acquia-yaml;
+composer;;;
+ssh;(OpenSSH_\d+\.\d+[a-z]\d+);ssh -V 2>&1;
+rsync;version\s((\d+\.){2}\d+);;
+node;;;
+git;;;
+unzip;UnZip (\d+\.\d+);unzip -v;
+bzip2;;bzip2 --version 2>&1 | head -n1;
+gem;;;
+npm;;;
+drush;;;
+drush6;;;
+drush7;;;
+drush8;;;
+wget;;;
+mysql;;;
+memcached;Version:\s((\d+\.){2}\d+);apt-cache show memcached;
+patch;;;
+nvm;;;
+google-chrome;((\d+\.){3}\d+);;
+rbenv 2.3.x;(2\.3\.\d+);rbenv versions;
+rbenv 2.4.x;(2\.4\.\d+);rbenv versions;
+bundler;;bundle --version;
+fontconfig;;fc-list --version 2>&1;
+imagemagick;((\d+\.){2}\d+\-\d+);convert --version 2>&1;
+#############################
+# PHP extentions
+#############################
+php extention pcntl;pcntl;php -m;true
+php extention bcmath;bcmath;php -m;true
+php extention xsl;xsl;php -m;true
+php extention soap;soap;php -m;true
+php7.2 extention pcntl;pcntl;php7.2 -m;true
+php7.2 extention bcmath;bcmath;php7.2 -m;true
+php7.2 extention xsl;xsl;php7.2 -m;true
+php7.2 extention soap;soap;php7.2 -m;true
+php7.3 extention pcntl;pcntl;php7.3 -m;true
+php7.3 extention bcmath;bcmath;php7.3 -m;true
+php7.3 extention xsl;xsl;php7.3 -m;true
+php7.3 extention soap;soap;php7.3 -m;true
+#############################
+# PHP extentions versions
+#############################
+php extention version gd;;;
+php extention version pdo_mysql;(5.0.12-dev - 20150407 - \$Id: 38fea24f2847fa7519001be390c98ae0acafe387);;
+php extention version mcrypt;;;
+php extention version gmp;;;
+php extention version zip;;;
+php extention version mysqli;(5.0.12-dev - 20150407 - \$Id: 38fea24f2847fa7519001be390c98ae0acafe387);;
+php extention version bz2;;;
+php extention version imagick;;;
+php extention version curl;;;
+php extention version memcached;;;
+php7.2 extention version gd;;;
+php7.2 extention version pdo_mysql;(5.0.12-dev - 20150407 - \$Id: 3591daad22de08524295e1bd073aceeff11e6579);;
+php7.2 extention version gmp;;;
+php7.2 extention version zip;;;
+php7.2 extention version mysqli;(5.0.12-dev - 20150407 - \$Id: 3591daad22de08524295e1bd073aceeff11e6579);;
+php7.2 extention version bz2;;;
+php7.2 extention version imagick;;;
+php7.2 extention version curl;;;
+php7.2 extention version memcached;;;
+php7.3 extention version gd;;;
+php7.3 extention version pdo_mysql;(5.0.12-dev - 20150407 - \$Id: 7cc7cc96e675f6d72e5cf0f267f48e167c2abb23);;
+php7.3 extention version gmp;;;
+php7.3 extention version zip;;;
+php7.3 extention version mysqli;(5.0.12-dev - 20150407 - \$Id: 7cc7cc96e675f6d72e5cf0f267f48e167c2abb23);;
+php7.3 extention version bz2;;;
+php7.3 extention version imagick;;;
+php7.3 extention version curl;;;
+php7.3 extention version memcached;;;

@@ -13,6 +13,5 @@ then
 else
   MESSAGE="Version check completed successfully for ${1}. Version: ${3}."
   echo $MESSAGE >> /tmp/version_check_success
-  echo "SUCCESS - Version: ${3}." 
+  echo "SUCCESS - Version: ${3}."
 fi
-

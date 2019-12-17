@@ -1,23 +1,31 @@
 <?php
-
 /**
  * Performs a simple version check for php extensions.
  *
  * The versions are hard-coded from container specs.
  */
 function get_php_ext_versions() {
-  $extensions = array(
-    'gd' => '2.1.1',
-    'pdo_mysql' => '5.0.12-dev - 20150407 - $Id: 38fea24f2847fa7519001be390c98ae0acafe387',
-    'mcrypt' => '2.5.8',
-    'gmp' => '6.1.0',
-    'zip' => '1.13.5',
-    'mysqli' => '5.0.12-dev - 20150407 - $Id: 38fea24f2847fa7519001be390c98ae0acafe387',
-    'bz2' => '1.0.6',
-    'imagick' => '3.4.4',
-    'curl' => '7.47.0',
-    'memcached' => '3.1.4',
-  );
+  $phpVersion = 'default';
+  if (preg_match('/^(\d.\d)/', phpversion(), $matches)) {
+    $phpVersion = 'php' . $matches[1];
+  }
+
+  $extensions = [];
+  $file = fopen('container-versions.log','r');
+  while (!feof($file)) {
+    $line = fgets($file);
+    if (empty($line)) {
+      continue;
+    }
+    list($pkg, $version) = explode('|', $line);
+    $version = trim($version);
+    if (preg_match('/((php(\d.\d)?) extension version (.*))/', $pkg, $matches)) {
+      if ($matches[2] == $phpVersion) {
+        $extensions[$matches[4]] = $version;
+      }
+    }
+  }
+  fclose($file);
 
   foreach ($extensions as $extension => $version) {
     ob_start();
