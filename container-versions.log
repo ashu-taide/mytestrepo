@@ -1,11 +1,11 @@
-php|7.1.34|
+php|7.1.33|
+php7.1|7.1.33|
 php7.2|7.2.25|
 php7.3|7.3.12|
 acquia-yaml|1.0.4|gem list acquia-yaml
 composer|1.9.1|
 ssh|OpenSSH_7.2p2|ssh -V 2>&1
 rsync|3.1.1|
-gzip|3.1.1|
 node|6.14.4|
 git|2.17.0|
 unzip|6.00|unzip -v
@@ -13,9 +13,10 @@ bzip2|1.0.6|bzip2 --version 2>&1 | head -n1
 gem|3.0.6|
 npm|3.10.10|
 drush|8.3.2|
+drush6|6.7.0|
 drush7|7.4.0|
 drush8|8.3.2|
-wget|1.17.2|
+wget|1.17.1|
 mysql|5.6.16|
 memcached|1.4.25|apt-cache show memcached
 patch|2.7.5|
@@ -24,30 +25,32 @@ google-chrome|78.0.3904.108|
 rbenv|1.1.2|
 rbenv 2.3.x|2.3.8|rbenv versions
 rbenv 2.4.x|2.4.9|rbenv versions
-bundler|2.1.1|bundle --version
+bundler|2.0.2|bundle --version
 fontconfig|2.11.94|fc-list --version 2>&1
 imagemagick|6.8.9-9|convert --version 2>&1
 php extension pcntl||
 php extension bcmath||
 php extension xsl||
 php extension soap||
+php7.2 extension pcntl||
 php7.2 extension bcmath||
+php7.2 extension xsl||
 php7.2 extension soap||
 php7.3 extension pcntl||
 php7.3 extension bcmath||
 php7.3 extension xsl||
 php7.3 extension soap||
-php7.3 extension test||
-php extension version gd|2.2.5|
+php extension version gd|2.1.1|
 php extension version pdo_mysql|5.0.12-dev - 20150407 - $Id: 38fea24f2847fa7519001be390c98ae0acafe387|
 php extension version mcrypt|2.5.8|
-php extension version zip|1.13.6|
+php extension version gmp|6.1.0|
+php extension version zip|1.13.5|
 php extension version mysqli|5.0.12-dev - 20150407 - $Id: 38fea24f2847fa7519001be390c98ae0acafe387|
 php extension version bz2|1.0.6|
 php extension version imagick|3.4.4|
 php extension version curl|7.47.0|
 php extension version memcached|3.1.4|
-php7.2 extension version gd|2.2.5|
+php7.2 extension version gd|2.1.1|
 php7.2 extension version pdo_mysql|5.0.12-dev - 20150407 - $Id: 3591daad22de08524295e1bd073aceeff11e6579|
 php7.2 extension version gmp|6.1.0|
 php7.2 extension version zip|1.15.4|
@@ -55,8 +58,8 @@ php7.2 extension version mysqli|5.0.12-dev - 20150407 - $Id: 3591daad22de0852429
 php7.2 extension version bz2|1.0.6|
 php7.2 extension version imagick|3.4.4|
 php7.2 extension version curl|7.47.0|
-php7.2 extension version memcached|3.1.9|
-php7.3 extension version gd|2.2.5|
+php7.2 extension version memcached|3.1.4|
+php7.3 extension version gd|2.1.1|
 php7.3 extension version pdo_mysql|5.0.12-dev - 20150407 - $Id: 7cc7cc96e675f6d72e5cf0f267f48e167c2abb23|
 php7.3 extension version gmp|6.1.0|
 php7.3 extension version zip|1.15.4|
