@@ -3,7 +3,7 @@ php7.1|7.1.33|
 php7.2|7.2.26|
 php7.3|7.3.13|
 acquia-yaml|1.0.4|gem list acquia-yaml
-composer|1.9.1|
+composer|1.9.2|
 ssh|OpenSSH_7.2p2|ssh -V 2>&1
 rsync|3.1.1|
 node|6.14.4|
@@ -21,11 +21,11 @@ mysql|5.6.16|
 memcached|1.4.25|apt-cache show memcached
 patch|2.7.5|
 nvm|0.35.2|
-google-chrome|79.0.3945.88|
+google-chrome|79.0.3945.130|
 rbenv|1.1.2|
 rbenv 2.3.x|2.3.8|rbenv versions
 rbenv 2.4.x|2.4.9|rbenv versions
-bundler|2.1.2|bundle --version
+bundler|2.1.4|bundle --version
 fontconfig|2.11.94|fc-list --version 2>&1
 imagemagick|6.8.9-9|convert --version 2>&1
 php extension pcntl||
