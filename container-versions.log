@@ -1,7 +1,8 @@
-php|7.2.29|
+php|7.2.30|
 php7.1|7.1.33|
-php7.2|7.2.29|
-php7.3|7.3.16|
+php7.2|7.2.30|
+php7.3|7.3.17|
+php7.4|7.4.5|
 acquia-yaml|1.0.4|gem list acquia-yaml
 composer|1.10.5|
 ssh|OpenSSH_7.2p2|ssh -V 2>&1
@@ -21,7 +22,7 @@ mysql|5.7.29|
 memcached|1.4.25|apt-cache show memcached
 patch|2.7.5|
 nvm|0.35.3|
-google-chrome|81.0.4044.92|
+google-chrome|81.0.4044.122|
 rbenv|1.1.2|
 rbenv 2.3.x|2.3.8|rbenv versions
 rbenv 2.4.x|2.4.10|rbenv versions
@@ -40,6 +41,10 @@ php7.3 extension pcntl||
 php7.3 extension bcmath||
 php7.3 extension xsl||
 php7.3 extension soap||
+php7.4 extension pcntl||
+php7.4 extension bcmath||
+php7.4 extension xsl||
+php7.4 extension soap||
 php extension version gd|2.2.5|
 php extension version pdo_mysql|5.0.12-dev - 20150407 - $Id: 3591daad22de08524295e1bd073aceeff11e6579|
 php extension version gmp|6.1.0|
@@ -67,3 +72,12 @@ php7.3 extension version bz2|1.0.6|
 php7.3 extension version imagick|3.4.4|
 php7.3 extension version curl|7.47.0|
 php7.3 extension version memcached|3.1.4|
+php7.4 extension version gd|2.2.5|
+php7.4 extension version pdo_mysql|7.4.5|
+php7.4 extension version gmp|6.1.0|
+php7.4 extension version zip|1.15.6|
+php7.4 extension version mysqli|7.4.5|
+php7.4 extension version bz2|1.0.6|
+php7.4 extension version imagick|3.4.4|
+php7.4 extension version curl|7.47.0|
+php7.4 extension version memcached|3.1.4|
