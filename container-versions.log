@@ -1,6 +1,6 @@
 php|7.4.33|
 php7.4|7.4.33|
-php8.0|8.0.28|
+php8.0|8.0.29|
 acquia-yaml|1.0.4|gem list acquia-yaml
 composer|2.5.8|
 composer1|1.10.26|
@@ -61,7 +61,7 @@ php7.4 extension version curl|7.47.0|
 php7.4 extension version memcached|3.2.0|
 php7.4 extension version sodium|1.0.8|
 php8.0 extension version gd|2.1.0|
-php8.0 extension version pdo_mysql|8.0.28|
+php8.0 extension version pdo_mysql|8.0.29|
 php8.0 extension version gmp|6.1.0|
 php8.0 extension version zip|1.19.5|
 php8.0 extension version mysqli|5.7.33|
