@@ -1,83 +1,72 @@
-php|7.2.30|
-php7.1|7.1.33|
-php7.2|7.2.30|
-php7.3|7.3.17|
-php7.4|7.4.5|
+php|7.4.33|
+php7.4|7.4.33|
+php8.0|8.0.28|
 acquia-yaml|1.0.4|gem list acquia-yaml
-composer|1.10.5|
+composer|2.5.7|
+composer1|1.10.26|
+composer2|2.5.7|
 ssh|OpenSSH_7.2p2|ssh -V 2>&1
 rsync|3.1.1|
-node|8.17.0|
+node|18.12.1|
 git|2.17.0|
 unzip|6.00|unzip -v
 bzip2|1.0.6|bzip2 --version 2>&1 | head -n1
-gem|3.1.2|
-npm|6.13.4|
-drush|8.3.2|
-drush6|6.7.0|
-drush7|7.4.0|
-drush8|8.3.2|
+gem|3.3.26|
+npm|8.19.2|
+drush|0.10.2|
+drush8|8.4.12|
 wget|1.17.1|
-mysql|5.7.29|
+mysql|5.7.35|
 memcached|1.4.25|apt-cache show memcached
 patch|2.7.5|
-nvm|0.35.3|
-google-chrome|81.0.4044.122|
-rbenv|1.1.2|
-rbenv 2.3.x|2.3.8|rbenv versions
-rbenv 2.4.x|2.4.10|rbenv versions
-bundler|2.1.4|bundle --version
+nvm|0.39.3|
+google-chrome|111.0.5563.146|
+rvm|1.29.12|
+rvm 2.7.x||rvm list
+rvm 3.0.x|3.0.6|rvm list
+rvm 3.1.x|3.1.3|rvm list
+bundler|2.3.26|bundle --version
 fontconfig|2.11.94|fc-list --version 2>&1
 imagemagick|6.8.9-9|convert --version 2>&1
 php extension pcntl||
 php extension bcmath||
 php extension xsl||
 php extension soap||
-php7.2 extension pcntl||
-php7.2 extension bcmath||
-php7.2 extension xsl||
-php7.2 extension soap||
-php7.3 extension pcntl||
-php7.3 extension bcmath||
-php7.3 extension xsl||
-php7.3 extension soap||
 php7.4 extension pcntl||
 php7.4 extension bcmath||
 php7.4 extension xsl||
 php7.4 extension soap||
-php extension version gd|2.2.5|
-php extension version pdo_mysql|5.0.12-dev - 20150407 - $Id: 3591daad22de08524295e1bd073aceeff11e6579|
+php8.0 extension pcntl||
+php8.0 extension bcmath||
+php8.0 extension xsl||
+php8.0 extension soap||
+php extension version gd|2.1.0|
+php extension version pdo_mysql||
 php extension version gmp|6.1.0|
-php extension version zip|1.15.4|
-php extension version mysqli|5.0.12-dev - 20150407 - $Id: 3591daad22de08524295e1bd073aceeff11e6579|
+php extension version zip|1.15.6|
+php extension version mysqli||
 php extension version bz2|1.0.6|
-php extension version imagick|3.4.4|
+php extension version imagick|3.7.0|
 php extension version curl|7.47.0|
-php extension version memcached|3.1.4|
-php7.2 extension version gd|2.2.5|
-php7.2 extension version pdo_mysql|5.0.12-dev - 20150407 - $Id: 3591daad22de08524295e1bd073aceeff11e6579|
-php7.2 extension version gmp|6.1.0|
-php7.2 extension version zip|1.15.4|
-php7.2 extension version mysqli|5.0.12-dev - 20150407 - $Id: 3591daad22de08524295e1bd073aceeff11e6579|
-php7.2 extension version bz2|1.0.6|
-php7.2 extension version imagick|3.4.4|
-php7.2 extension version curl|7.47.0|
-php7.2 extension version memcached|3.1.4|
-php7.3 extension version gd|2.2.5|
-php7.3 extension version pdo_mysql|5.0.12-dev - 20150407 - $Id: 7cc7cc96e675f6d72e5cf0f267f48e167c2abb23|
-php7.3 extension version gmp|6.1.0|
-php7.3 extension version zip|1.15.4|
-php7.3 extension version mysqli|5.0.12-dev - 20150407 - $Id: 7cc7cc96e675f6d72e5cf0f267f48e167c2abb23|
-php7.3 extension version bz2|1.0.6|
-php7.3 extension version imagick|3.4.4|
-php7.3 extension version curl|7.47.0|
-php7.3 extension version memcached|3.1.4|
-php7.4 extension version gd|2.2.5|
-php7.4 extension version pdo_mysql|7.4.5|
+php extension version memcached|3.2.0|
+php extension version sodium|1.0.8|
+php7.4 extension version gd|2.1.0|
+php7.4 extension version pdo_mysql|7.4.33|
 php7.4 extension version gmp|6.1.0|
 php7.4 extension version zip|1.15.6|
-php7.4 extension version mysqli|7.4.5|
+php7.4 extension version mysqli|5.7.33|
 php7.4 extension version bz2|1.0.6|
-php7.4 extension version imagick|3.4.4|
+php7.4 extension version imagick|3.7.0|
 php7.4 extension version curl|7.47.0|
-php7.4 extension version memcached|3.1.4|
+php7.4 extension version memcached|3.2.0|
+php7.4 extension version sodium|1.0.8|
+php8.0 extension version gd|2.1.0|
+php8.0 extension version pdo_mysql|8.0.28|
+php8.0 extension version gmp|6.1.0|
+php8.0 extension version zip|1.19.5|
+php8.0 extension version mysqli|5.7.33|
+php8.0 extension version bz2|1.0.6|
+php8.0 extension version imagick|3.7.0|
+php8.0 extension version curl|7.47.0|
+php8.0 extension version memcached|3.2.0|
+php8.0 extension version sodium|1.0.8|
