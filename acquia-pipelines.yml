@@ -12,7 +12,7 @@ events:
             - pipelines_metadata 'hello' 'world'
             - echo "Executing default event"
             - echo "Creating a long-running background job that should be killed"
-            - 'sleep 3700 &'
+            - 'sleep 370 &'
             - 'jobs -p > /tmp/bg.pid'
             - echo "Testing env vars"
             - 'echo "CI=" : ${CI?"Need to set CI"}'
