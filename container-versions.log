@@ -11,7 +11,7 @@ node|8.17.0|
 git|2.17.0|
 unzip|6.00|unzip -v
 bzip2|1.0.6|bzip2 --version 2>&1 | head -n1
-gem|3.3.26|
+gem|3.4.19|
 npm|6.13.4|
 drush|0.10.2|
 drush8|8.4.12|
@@ -21,11 +21,10 @@ memcached|1.4.25|apt-cache show memcached
 patch|2.7.5|
 nvm|0.39.3|
 google-chrome|111.0.5563.146|
-rvm|1.29.12|
-rvm 2.7.x||rvm list
-rvm 3.0.x|3.0.6|rvm list
-rvm 3.1.x|3.1.3|rvm list
-bundler|2.3.26|bundle --version
+rbenv|1.2.0|
+rbenv 2.7.x||rbenv versions
+rbenv 3.0.x|3.0.6|rbenv versions
+bundler|2.4.19|bundle --version
 fontconfig|2.11.94|fc-list --version 2>&1
 imagemagick|6.8.9-9|convert --version 2>&1
 php extension pcntl||
