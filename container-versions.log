@@ -10,7 +10,7 @@ node|8.17.0|
 git|2.17.0|
 unzip|6.00|unzip -v
 bzip2|1.0.6|bzip2 --version 2>&1 | head -n1
-gem|3.5.3|
+gem|3.5.5|
 npm|6.13.4|
 drush|0.10.2|
 drush8|8.4.12|
@@ -23,7 +23,7 @@ google-chrome|111.0.5563.146|
 rbenv|1.2.0|
 rbenv 2.7.x||rbenv versions
 rbenv 3.0.x|3.0.6|rbenv versions
-bundler|2.5.3|bundle --version
+bundler|2.5.5|bundle --version
 fontconfig|2.11.94|fc-list --version 2>&1
 imagemagick|6.8.9-9|convert --version 2>&1
 php extension pcntl||
