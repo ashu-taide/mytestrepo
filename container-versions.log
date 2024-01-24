@@ -1,17 +1,16 @@
-php|7.4.33|
+php|8.1.24|
 php7.4|7.4.33|
-php8.0|8.0.30|
 acquia-yaml|1.0.4|gem list acquia-yaml
-composer|2.6.3|
-composer1|1.10.26|
-composer2|2.6.3|
+composer|2.6.6|
+composer1|1.10.27|
+composer2|2.6.6|
 ssh|OpenSSH_7.2p2|ssh -V 2>&1
 rsync|3.1.1|
 node|8.17.0|
 git|2.17.0|
 unzip|6.00|unzip -v
 bzip2|1.0.6|bzip2 --version 2>&1 | head -n1
-gem|3.4.19|
+gem|3.5.3|
 npm|6.13.4|
 drush|0.10.2|
 drush8|8.4.12|
@@ -24,7 +23,7 @@ google-chrome|111.0.5563.146|
 rbenv|1.2.0|
 rbenv 2.7.x||rbenv versions
 rbenv 3.0.x|3.0.6|rbenv versions
-bundler|2.4.19|bundle --version
+bundler|2.5.3|bundle --version
 fontconfig|2.11.94|fc-list --version 2>&1
 imagemagick|6.8.9-9|convert --version 2>&1
 php extension pcntl||
@@ -35,14 +34,10 @@ php7.4 extension pcntl||
 php7.4 extension bcmath||
 php7.4 extension xsl||
 php7.4 extension soap||
-php8.0 extension pcntl||
-php8.0 extension bcmath||
-php8.0 extension xsl||
-php8.0 extension soap||
 php extension version gd|2.1.0|
 php extension version pdo_mysql||
 php extension version gmp|6.1.0|
-php extension version zip|1.15.6|
+php extension version zip|1.19.5|
 php extension version mysqli||
 php extension version bz2|1.0.6|
 php extension version imagick|3.7.0|
@@ -59,13 +54,3 @@ php7.4 extension version imagick|3.7.0|
 php7.4 extension version curl|7.47.0|
 php7.4 extension version memcached|3.2.0|
 php7.4 extension version sodium|1.0.8|
-php8.0 extension version gd|2.1.0|
-php8.0 extension version pdo_mysql|8.0.30|
-php8.0 extension version gmp|6.1.0|
-php8.0 extension version zip|1.19.5|
-php8.0 extension version mysqli|5.7.33|
-php8.0 extension version bz2|1.0.6|
-php8.0 extension version imagick|3.7.0|
-php8.0 extension version curl|7.47.0|
-php8.0 extension version memcached|3.2.0|
-php8.0 extension version sodium|1.0.8|
