@@ -48,7 +48,7 @@ events:
             - 'echo "Testing Memory Monitor"'
             - pipelines-memory-monitor-status || echo "Could not locate the memory monitor status command"
             - 'echo "Validating validity of container certs"'
-            - sudo /usr/local/src/pipelines-logtailor/bin/validate_cert /etc/pipelines_config/ssl.cert /etc/pipelines_config/ssl.key
+            - sudo /usr/sbin/validate_cert /etc/pipelines_config/ssl.cert /etc/pipelines_config/ssl.key
             - php -i | grep variables_order
             - 'echo "Testing headless chrome browser"'
             - google-chrome --version
