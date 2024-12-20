@@ -1,19 +1,19 @@
 php|7.4.33|
 php7.4|7.4.33|
 acquia-yaml|1.0.4|gem list acquia-yaml
-composer|2.8.1|
+composer|2.8.4|
 composer1||
-composer2|2.8.1|
+composer2|2.8.4|
 ssh|OpenSSH_8.2p1|ssh -V 2>&1
 rsync|3.1.3|
 node|18.20.4|
 git|2.25.1|
 unzip|6.00|unzip -v
 bzip2|1.0.8|bzip2 --version 2>&1 | head -n1
-gem|3.5.21|
+gem|3.6.1|
 npm|10.7.0|
 drush|0.10.2|
-drush8|8.4.12|
+drush8|8.5.0|
 wget|1.20.3|
 mysql|5.7.44|
 memcached|1.5.22|apt-cache show memcached
@@ -23,7 +23,7 @@ google-chrome|111.0.5563.146|
 rbenv|1.3.0|
 rbenv 2.7.x||rbenv versions
 rbenv 3.0.x||rbenv versions
-bundler|2.5.21|bundle --version
+bundler|2.6.1|bundle --version
 fontconfig|2.13.1|fc-list --version 2>&1
 imagemagick|6.9.10-23|convert --version 2>&1
 php extension pcntl||
@@ -48,7 +48,7 @@ php7.4 extension version gd|2.1.0|
 php7.4 extension version pdo_mysql|7.4.33|
 php7.4 extension version gmp|6.2.0|
 php7.4 extension version zip|1.15.6|
-php7.4 extension version mysqli|8.0.39|
+php7.4 extension version mysqli|8.0.40|
 php7.4 extension version bz2|1.0.8|
 php7.4 extension version imagick|3.7.0|
 php7.4 extension version curl|7.68.0|
