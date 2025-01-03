@@ -1,0 +1,19 @@
+version: 1.0.0
+services:
+- mysql
+events:
+  build:
+    steps:
+    - setup:
+        type: script
+        script:
+        - mysql -u root -proot -e "CREATE DATABASE drupal"
+        - echo 'This is simple echo from build event'
+        - sleep 2
+fail-on-build:
+  steps:
+  - runonfailure:
+      type: script
+      script:
+      - echo 'This is simple echo from fail-on-build event'
+      - sleep 2
