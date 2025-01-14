@@ -6,24 +6,24 @@ composer1||
 composer2|2.8.4|
 ssh|OpenSSH_8.2p1|ssh -V 2>&1
 rsync|3.1.3|
-node|18.20.4|
+node|18.20.5|
 git|2.25.1|
 unzip|6.00|unzip -v
 bzip2|1.0.8|bzip2 --version 2>&1 | head -n1
-gem|3.6.1|
-npm|10.7.0|
+gem|3.6.2|
+npm|10.9.2|
 drush|0.10.2|
 drush8|8.5.0|
 wget|1.20.3|
 mysql|5.7.44|
 memcached|1.5.22|apt-cache show memcached
 patch|2.7.6|
-nvm|0.39.7|
+nvm|0.40.1|
 google-chrome|111.0.5563.146|
-rbenv|1.3.0|
+rbenv|1.3.2|
 rbenv 2.7.x||rbenv versions
 rbenv 3.0.x||rbenv versions
-bundler|2.6.1|bundle --version
+bundler|2.6.2|bundle --version
 fontconfig|2.13.1|fc-list --version 2>&1
 imagemagick|6.9.10-23|convert --version 2>&1
 php extension pcntl||
