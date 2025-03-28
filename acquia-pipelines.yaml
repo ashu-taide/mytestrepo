@@ -1,10 +1,21 @@
-version: 1.1.0
+version: 1.0.0
+variables:
+  global:
+    PIPELINE_CLOUD_SITE: pipelinesdonotdelete
+    HOSTING_API_STAGE: canary
 
 events:
   build:
     steps:
-      - script1:
+      - build:
           script:
-            - 'nvm use 18'
-            - 'node -v'
+            - mkdir artifacts && cd artifacts && touch artifact.txt
+            - echo "some content" >> $SOURCE_DIR/artifacts/artifact.txt
+            - echo "Testing Hosting API store artifact success scenario"
+      - upload-artifact:
+          script:
+            - echo "Start artifact"
+            - pipelines-artifact start
+            - echo "Upload artifact"
+            - pipelines-artifact upload $SOURCE_DIR/artifacts
 
