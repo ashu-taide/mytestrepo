@@ -1,11 +1,10 @@
-version: 1.3.0
-
-services:
-  - composer:
-      version: 1
+version: 1.1.0
 
 events:
   build:
     steps:
       - script1:
-          script: composer --version
+          script:
+            - 'nvm use 18'
+            - 'node -v'
+
