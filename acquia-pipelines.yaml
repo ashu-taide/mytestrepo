@@ -1,21 +1,11 @@
-version: 1.0.0
-variables:
-  global:
-    PIPELINE_CLOUD_SITE: pipelinesdonotdelete
-    HOSTING_API_STAGE: canary
+≥version: 1.3.0
+services:
+  - memcached
 
 events:
   build:
     steps:
-      - build:
-          script:
-            - mkdir artifacts && cd artifacts && touch artifact.txt
-            - echo "some content" >> $SOURCE_DIR/artifacts/artifact.txt
-            - echo "Testing Hosting API store artifact success scenario"
-      - upload-artifact:
-          script:
-            - echo "Start artifact"
-            - pipelines-artifact start
-            - echo "Upload artifact"
-            - pipelines-artifact upload $SOURCE_DIR/artifacts
-
+        - validate-memcached:
+            type: script
+            script:
+              - ps aux | grep memcached
