@@ -1,11 +1,41 @@
-version: 1.3.0
-services:
-  - memcached
+version: 1.0.0
+
+variables:
+  global:
+    CDE_DEPLOY_POLL_TIMEOUT: 3600
 
 events:
   build:
     steps:
-        - validate-memcached:
-            type: script
-            script:
-              - ps aux | grep memcached
+      # If you have build instructions, put them here. They are not required.
+      - build_site:
+          script:
+            - touch docroot/index.html
+            - echo "You successfully deployed your build to an ODE" > docroot/index.html
+
+  post-deploy:
+    steps:
+      # Deploy the build artifact to a Cloud on-demand environment.
+      - deploy:
+          script:
+            - date +"%T"
+            - echo "post deploy"
+            - pipelines-deploy
+            - date +"%T"
+
+  # When a GitHub pull request is merged, this deletes the coresponding ODE.
+  pr-merged:
+    steps:
+      - deploy:
+          script:
+            - echo "Pull request merged"
+            - pipelines-deploy
+
+  # When a GitHub pull request is closed, this deletes the coresponding ODE.
+  pr-closed:
+    steps:
+      - deploy:
+          script:
+            - echo "Pull request closed"
+            - pipelines-deploy
+            - echo "check commit for github"
