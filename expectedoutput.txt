@@ -1,0 +1,56 @@
++ echo $BUILD_DIR
+/mnt/tmp/local.prod/deploy
++ echo $PIPELINE_DEPLOY_WORKSPACE
+/mnt/tmp/local.prod/deploy
++ echo $CDE_DEPLOY_POLL_TIMEOUT
+3600
++ echo $CI
+true
++ echo $CONTINUOUS_INTEGRATION
+true
++ echo $npm_config_ignore_scripts
+true
++ echo $PIPELINE_APPLICATION_ID
+f027502b-ed6c-448e-97e8-4a0def7d25e1
++ echo $PIPELINE_CLOUD_REALM
+gardens-prod
++ echo $PIPELINE_CLOUD_SITE
+canaryqa0021
++ echo $PIPELINE_DEPLOY_VCS_PATH
+pipelines-build-donotdelete-test-environmentvariable
++ echo $DEPLOY_VCS_PATH
+pipelines-build-donotdelete-test-environmentvariable
++ echo $PIPELINE_DEPLOY_WORKSPACE
+/mnt/tmp/local.prod/deploy
++ echo $PIPELINE_ENV
+true
++ echo $PIPELINE_GIT_HEAD_REF
+0f8491b3238addbe4f56c32081b23a2b62b243b8
++ echo $PIPELINE_JOB_ID
+ed7df981-c469-49e7-836b-5af48a68a309
++ echo $PIPELINES_JOB_ID
+ed7df981-c469-49e7-836b-5af48a68a309
++ echo $PIPELINE_PORT_22
+32800
++ echo $PIPELINE_PORT_8007
+32801
++ echo $PIPELINE_SSH_KEY
+
++ echo $PIPELINE_STATUS
+running
++ echo $PIPELINE_VCS_PATH
+donotdelete-test-environmentvariable
++ echo $SOURCE_VCS_PATH
+donotdelete-test-environmentvariable
++ echo $PIPELINES_CURRENT_EVENT
+build
++ echo $PIPELINES_ENCRYPTED_VARIABLES_AVAILABLE
+TRUE
++ echo $PIPELINES_SCRIPT_DATA_FILE
+/tmp/pipelines_script_data.json
++ echo $SOURCE_DIR
+/mnt/tmp/local.prod/source
++ echo $SYNC_DB_POLL_TIMEOUT
+
++ echo $YARN_ENABLE_SCRIPTS
+false
