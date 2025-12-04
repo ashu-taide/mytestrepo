@@ -10,31 +10,31 @@ events:
       # If you have build instructions, put them here. They are not required.
       - build_site:
           script:
-            - echo "ashu_rucha_cde" > docroot/index.html
-
-  post-deploy:
-    steps:
-      # Deploy the build artifact to a Cloud on-demand environment.
-      - deploy:
-          script:
-            - date +"%T"
-            - echo "post deploy"
-            - pipelines-deploy
-            - date +"%T"
-
-  # When a GitHub pull request is merged, this deletes the coresponding ODE.
-  pr-merged:
-    steps:
-      - deploy:
-          script:
-            - echo "Pull request merged"
-            - pipelines-deploy
-
-  # When a GitHub pull request is closed, this deletes the coresponding ODE.
-  pr-closed:
-    steps:
-      - deploy:
-          script:
-            - echo "Pull request closed"
-            - pipelines-deploy
-            - echo " for "
+          - echo $BUILD_DIR
+          - echo $PIPELINE_DEPLOY_WORKSPACE
+          - echo $CDE_DEPLOY_POLL_TIMEOUT
+          - echo $CI
+          - echo $CONTINUOUS_INTEGRATION
+          - echo $npm_config_ignore_scripts
+          - echo $PIPELINE_APPLICATION_ID
+          - echo $PIPELINE_CLOUD_REALM
+          - echo $PIPELINE_CLOUD_SITE
+          - echo $PIPELINE_DEPLOY_VCS_PATH
+          - echo $DEPLOY_VCS_PATH
+          - echo $PIPELINE_DEPLOY_WORKSPACE
+          - echo $PIPELINE_ENV
+          - echo $PIPELINE_GIT_HEAD_REF
+          - echo $PIPELINE_JOB_ID
+          - echo $PIPELINES_JOB_ID
+          - echo $PIPELINE_PORT_22
+          - echo $PIPELINE_PORT_8007
+          - echo $PIPELINE_SSH_KEY
+          - echo $PIPELINE_STATUS
+          - echo $PIPELINE_VCS_PATH
+          - echo $SOURCE_VCS_PATH
+          - echo $PIPELINES_CURRENT_EVENT
+          - echo $PIPELINES_ENCRYPTED_VARIABLES_AVAILABLE
+          - echo $PIPELINES_SCRIPT_DATA_FILE
+          - echo $SOURCE_DIR
+          - echo $SYNC_DB_POLL_TIMEOUT
+          - echo $YARN_ENABLE_SCRIPTS
