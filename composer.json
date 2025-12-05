@@ -1,0 +1,8 @@
+{
+    "repositories": [
+        {
+            "type": "github",
+            "url": "git@github.com:ashu-taide/pipelines-tests.git"
+        }
+    ]
+}
