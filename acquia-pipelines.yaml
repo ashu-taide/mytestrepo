@@ -1,8 +1,14 @@
-version: 1.0.0
+version: 1.3.0
+
+services:
+  - composer:
+      version: 2
 
 variables:
   global:
     CDE_DEPLOY_POLL_TIMEOUT: 3600
+    COMPOSER_AUTH:
+      secure: 2acG2YSVAXo93jtEFiC6dfLzTnuwgRmGQCuJfR88nqV5o8n6Qn6V3TT4wdjeglc+AubrmF8HAOdRta4Jho7mvMpvkcUV85biTxjeD1yeppBSNu7yulX8ueBBvGWbDVzI/eWM78LvxAWegShZPVd7LfnBfVvpQOfdbTFbzF7fNmvx4Y3gdzk8IEXJnU7fZ4t1NFYBIxhzgmcjA4qLs225ps8e47d+34PCe3n68JUc6mbLTR3tSl6QmXYqxjY7dwu/QMmvo10TMxMOWRwP0mNgBMjhKt3F9V9C/CLhEbkdIFQiCOYpj9ZRKznjjOkp3VjP6bl0kdyC8SkHKjBToW0T/f7gtLztea5fRXbQseLlLhUFbUDn5GbMVl9HoivIxb6+XNiz41MMzCFttRacQChe88Ayc/x5U3axHZw57Og3y2KwGPrmkT5lqFKrBk+kWLjeoQyFT+dmZ9Rxuuy/QCfCdZLiC2udmdFJFb7/nuuBp+/vo2lAtGcODb8iUTwpr/IQYjpFb+L68UYyIJ8cWvmcq1S3qsYMDr22VcRBWU/WTDQVjZ1WXPGAuAHzN1aWJICx1B8sX9uc/XO4pb4KrDm9Jp8a1PluZV59Epqa4VHxsDhW3ae0VCLBjtuv5ZdOUsdLLk/Kuhs0P1fvMPMDb7IFZZtaW7WJIcoedqoNUNE2bKEvh0=rIwjescep/51rDch/lZxlElG2p1VxxdUdKzPGJzfSSmZ7y7Efq7Z1S5R8wysvmWDHKgoVjSrcqPLQaBQufeLjOUXLr8dbuhQ+KeAvw7O9XtmPIpiy75T1P0SjKKgPzlbSUPQgHxN8+xFuaQJ3I2IkxIhig7L75rNT/0fvmvmEcg=
 
 events:
   build:
