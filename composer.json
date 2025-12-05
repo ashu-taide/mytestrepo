@@ -1,8 +1,19 @@
 {
     "repositories": [
         {
-            "type": "github",
-            "url": "git@github.com:ashu-taide/pipelines-tests.git"
+            "type": "package",
+            "package": {
+                "name": "ashu-taide/pipelines-tests.git",
+                "version": "1.0.0",
+                "source": {
+                    "url": "https://github.com/ashu-taide/pipelines-tests.git",
+                    "type": "git",
+                    "reference": "main"
+                }
+            }
         }
-    ]
+    ],
+    "require": {
+        "ashu-taide/pipelines-tests.git": "1.0.0"
+    }
 }
