@@ -17,5 +17,6 @@ events:
       - build_site:
           script:
           - echo "Composer Install"
+          - echo $COMPOSER_AUTH
           - composer install --no-interaction --prefer-dist --optimize-autoloader
           - echo "Build completed."
