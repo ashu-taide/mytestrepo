@@ -1,0 +1,24 @@
+version: 1.0.0
+events:
+  build:
+    steps:
+      -
+        behaviors:
+          type: script
+          script:
+            - env
+            - 'set +e'
+            - 'echo "Testing encrypted variable"'
+            - 'echo "DECRYPTABLE_VAR="${DECRYPTABLE_VAR?"Need to set DECRYPTABLE_VAR"}'
+            - 'echo "Testing encrypted keys"'
+            - 'export MD5SUM="`md5sum ~/.ssh/DECRYPTABLE_SSH_KEY`"'
+            - 'echo -n "$MD5SUM" | grep `echo -n "$DECRYPTABLE_SSH_VAR" | md5sum`'
+            - 'echo "Verified DECRYPTABLE_SSH_KEY is correctly encrypted."'
+variables:
+  global:
+    PIPELINES_ENCRYPTED_VARIABLES_AVAILABLE: false
+    DECRYPTABLE_VAR:
+      secure: 2acXAh4Wgg8/S3aC/2b8fKeJQtb4ry7Yoydx8TAKSpFEHhRSk6M9Y+xVq+SXnIxIGNhn+l22mo+/QoMlK9V7SqlS4iCPwDNijhP0gm7nO9d9HF0lguKi4+v7gykeQRr7UDQwNfqI9RFkx4MBm4F9RV722qPX8s7lySD90zi4hEZgiYwyCboYGDov/kj9IHR5ogE5FhEFHGpekDXIN5KoPOCTB4KK8Nyfl8GWlWxdpWxtblqo5lj26CZS2nQ2RmQdLbPpbDkC9y+lCCh6SDUl3Eiw8Bg31RffVCRB1UPenqCgfXdxdQlrwyNbagtbzJR8Mrj1WloXOCMBdcgYpcF7piMQNhWKFJpVyNqABuwOTZPodKHoj89VxfsxefFqRStEPACtv/02xUUj7COFab13qNTdmRf/NYVF1aYQXFiEmUlh/+XGwUByKexCbp2oPPkObdTQAKbjQxoJADD+hTRMBoQvcHtJlPDeZtZrSJlh3QUdNRqbG0xjB3xHYEXmmI4HUpFBJXBOHZVzgBDwgTZD0hXeAaD42pkqySuAw0f+WYRXV7vUlyqt5c/mPQfTjC9G+pgz2zu2wXFGJ4w9ENh/BxWeGD5Ozv2rcl7QPMaHDrFnw6rrLOg30LE9dQFacAlChaGDfgGq0DaJ6sodZgurPImcmtIxy4GbL0uMr/FhjhFo4s=icgWIXXjYoXOkRmoeTPmBnvZXuwcyUKQfhmxXIm5+70a1ZIFI004lFxtmGUQXW3Di070u9C7Vf9jhztBtX6R5GCY0ZRgNql8tOW48VoWwr+o7R8riXq/GA/guzuKjwMjrTHZ6v0gKztK42kYWy80bQ==
+ssh-keys:
+  DECRYPTABLE_SSH_KEY:
+    secure: 2acrcVAI6n58IaM8j/xv4AHp8vZ505ikQyFebdCliFb9zs7sMeH9XJa09Y+IYqladT1NY3BCImXwkU2C6IBjAfSQ538nwKjoM+E15wYR+kR4vtWqkCYQYPBQB3W0UmpUV1c9vxwq81n2QRbfljokXmVLt5KL6OW2OLDWOjajWm5woLZ44Uh7mdN3+uU4TRoNNySu+eRbup7iEN9Vpm7R6jhaOI4iKgI7CSjCeem7vGZZCf44/7werKNI+OiEDFcd6Gpr6QDz2jKc2Yr3Ies4CB0iMHzStgOYbepP+/hIcZH7rzrc8VPbvbZKHWH8d/ZVzqy5ORx/HAKQgasGjbkUQTpzQnSGZW2tLYWx9ZtQSk89gBeflscnu29DDLA46zf0sMWYjQP8NRHNZ+HWp6Tw7aS0ZLhdigAVX80zUKdXpvRFA6ZJuu70KGCCBBgxkuqeBtulYmY6RX/4y9MZqqehlWxhtH3P1DVQiTVamQF4wDAI/d6ngnCa2/XO1BalM8tVyAPGBEUDkGwmHwDngvSVFx3chmP9ahgDTF9x3dL/XhFOUmT8WUcBDV7UTEkwYdYqCX/7ztpQ5PixDIEbskzEHMEkV/d2rxkNtg0fuBWPeN4z4jiFwYIGrTqNf9q1PSAFw6DJtWhWV20iFp5aguwZY6cdu0Notj4f9sqAK1gfovCkEw=xYQZrENuFL4EKuC32CMByrWluB/CZ77oJTMqIVpJYDUAYyo3LXqkAyYeUN14C+fnxZB7R2nh/oYrEpJ+1bcs4Unkyv8/0qx36BTo6PbYeMs6g+iSZQ7CMHG5+a045VZhOtVPhIi4i17xtqr3O0YlkLYeF0e4vhGYo1IqKMEPLU1OMCuhxzcBtWyMlqLh4p1KwIU2wihPrkP6utJonyaAFFe7EIBGIHTXTbOJIPggwhG+Var+of9RlE8A95XtlsN4o7GtW5YKFoUepPamPb6hb9jJVQgQAon7G8WEQ+OywuhEuQ0vsH/OeElrGpS9b/mx7r+CK9VfEH8QBqETUFvoVvWP0HcVJFcO2kg04ons+wFMKAL/834Q+VVuXP01gdcfoSLSM7ApzJN55U65nv7DuNmuirrtIm5HTEXpaOY/8/mme5infUh6EG2yWdvFe+NP/TKp0FDeHguYOGTJ/rwqZlD7mJlSbV6vsKKoIcAAhLaR+HKmvGS2unCVX1sDUYKZxkUN157t0yCCqcXmc2GO7+L6nT8mgo9Oe56FWl7aH9r8ILnXhvnv9Nxi4nynLAlgcPnjJv5e6TqX5b3eLN4ndx60N6fnncpqBTxE/DoHm2MaK/aQSxXvLe1Cnlxof0lemvdXc/+mKj1a2aF1lbVmTYnNIwdB/74xLLp8NrgeWAHvDjGQh1QX59kTIwnvClLK
