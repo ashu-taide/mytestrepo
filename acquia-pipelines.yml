@@ -95,13 +95,6 @@ events:
           script:
             - 'echo "Check if the git clone verbose is working"'
             - git clone --progress --verbose https://github.com/qawoody/welcome-pipelines.git
-  custom:
-    steps:
-      - steptwo:
-          type: script
-          script:
-            - 'echo "Executing custom event"'
-            - 'echo "I have slashes"'
   post-deploy:
     steps:
       - check-ssh-key-access:
