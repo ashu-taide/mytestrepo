@@ -21,5 +21,3 @@ events:
           - ls
           - echo $COMPOSER_AUTH
           - cat ~/.ssh/write-key
-
-
