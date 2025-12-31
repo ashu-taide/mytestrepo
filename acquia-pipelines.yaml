@@ -25,6 +25,13 @@ events:
           script:
           - echo "passing job"
           - echo $COMPOSER_AUTH
+          - exit 1
+  fail-on-build:
+    steps:
+      - check-for-variable:
+        script:
+        - echo "fail on build"
+        - echo $COMPOSER_AUTH
   pr-merged:
     steps:
       - prmerged:
