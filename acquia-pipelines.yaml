@@ -7,8 +7,6 @@ services:
 variables:
   global:
     CDE_DEPLOY_POLL_TIMEOUT: 3600
-    COMPOSER_AUTH:
-      secure: 2ac0nfX944Szo8oZSoWh14OQIzs5yquEqHKp4w7ZSd7ox0GxOQhjnDikRQUuXUAFVCqxMwh/woqHk5wXlCs+i5JmCnuaZgRkhQhgmCxytgVrdwO71nMJDw6lnUv//kr26l23eFX6wcKXfaHGXB4pZMf6yik4BhHF8RXemNpoU103DYqCRA/IPUEHY2PnGN6fW1tjIFS/aOJQcf293Xv9V231o16h4IFPOfh60RO3GqwACrnyDFrG5MdkwT2uEvJp0DcXekJwsk+mgpFFEgvw1/FRo9wQOfTArySIQtedYBenHD7nBuB/16bELbuKUoe8QD0Sp/QBJgyBoY6LANCz4PQRs10kk8zK6fGcKLDLNygMcQm2XLHspb4xgLC4023nqztfCocVIElp2ana1fc9kU7pAwx67g8iOcqWFjXH2bgKl4ZslNnsYcZtbfwRi1PfXiLqPI7kovWt4rlgmgp2IG9x1iMHKXlsQI1eP2GY+UZLPcmmoBUG9KocNvZenUTmaPQTkhWRv18n8p6L/Ryv5eTMawDnbJfAG+A+nt4HW3w2rOpUw1FS2Stz/bCPoeQegqawFS2OOo3dfkMNtYu+OzNssepaMWcMVUq8VzmqXjxc9reTJwf2YxBUd+WaMNqoR/1GqzdmI9JYTsMeIzMOQxkU2qzXGMHO1DPqhMaVeCN5kE=G8uwUf76nNpWmfZm37GEnb2iVhW76MZodkCguAz3dGP6UNlv9EygFSS3rK9XRiIADtFkdAH8B/aowHVqPhf02HmnYFRdse9ADhUp9ilWGMNtubi5RqsaceD2HvQ6VGZJxFUSNwW379J2/XlSNHSOtE9DIsA91dnKeqyxRAWTZD6904RxRFQqhumJhbtvP4Z3l+OJVbFcad0PH+GNvA7zzR2udqBKrbZkWM4E72ZWtFtU51axOzz5GP9XBC0T11itVu84qBA5yYRYCZ+qZN832Q==
 
 events:
   build:
@@ -16,7 +14,4 @@ events:
       # If you have build instructions, put them here. They are not required.
       - build_site:
           script:
-          - echo "Composer Install"
-          - echo $COMPOSER_AUTH
-          - composer install --no-interaction --prefer-dist --optimize-autoloader
-          - echo "Build completed."
+          - echo "passing job"
