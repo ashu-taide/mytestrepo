@@ -15,3 +15,14 @@ events:
       - build_site:
           script:
           - echo "passing job"
+  pr-merged:
+    steps:
+      - prmerged:
+          script:
+          - echo "pr merged"
+  pr-closed:
+    steps:
+      - prclosed:
+          script:
+          - echo "pr closed"
+        
