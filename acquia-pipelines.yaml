@@ -16,32 +16,31 @@ events:
       # If you have build instructions, put them here. They are not required.
       - build_site:
           script:
-          - echo "passing job"
-          - exit 1
+            - echo "passing job"
   post-deploy:
     steps:
       # If you have build instructions, put them here. They are not required.
       - build_site:
           script:
-          - echo "passing job"
-          - echo $COMPOSER_AUTH
-          - exit 1
+            - echo "passing job"
+            - echo $COMPOSER_AUTH
+            - exit 1
   fail-on-build:
     steps:
       - check-for-variable:
-        script:
-          - echo "fail on build"
-          - echo $COMPOSER_AUTH
+          script:
+            - echo "fail on build"
+            - echo $COMPOSER_AUTH
   pr-merged:
     steps:
       - prmerged:
           script:
-          - echo "pr merged"
-          - echo $COMPOSER_AUTH
+            - echo "pr merged"
+            - echo $COMPOSER_AUTH
   pr-closed:
     steps:
       - prclosed:
           script:
-          - echo "pr closed"
-          - echo $COMPOSER_AUTH
+            - echo "pr closed"
+            - echo $COMPOSER_AUTH
 
