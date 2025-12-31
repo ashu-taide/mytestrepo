@@ -1,18 +1,19 @@
-version: 1.3.0
-
+version: 1.2.0
 services:
-  - composer:
-      version: 2
+  - php:
+      version: 8.2
 variables:
   global:
-    PASSWORD_WITH_VALUE:
-      secure: 2acqqVdmNjp/wx46V8EwUqTRizqONHGeax6BKaxlq54VG6FTPhc8c4mPpK2BNvSPiId4sucA8ZSWQpcqIRYPtBTz5wp3/niLXNYCxKeqw3kqcemMcHnKkmNhzW9g+OVjgxoXVQqIR6mbfoVUrwD/rhywFvxv4iA6SDGEZUxl+q7bKEuzftOxsCQrqNYVd1KdkwTq6nxXbQuE2dq5Q9S9Zw/tzm+TY6F4cSUjnW7yo2E18QaG1U632Pe1ep/DGz3COxwCxEdFiDk3BRagiFCTQU+bFpVpB2rQY5Bejxrxzhfz9b9eMrkBPn7BH4Je89syZBVeRs0tYCoW6WsO+/QZvS6jM++onjFdcmCWu1OOtamNe3an+Gw2nQhvF1MoWzuH1VgBy6VUbymnR7TH5TGLMVTRVAj0yRwIZrxQ5At9IC7uaQVS4ozHJeEVdWesMcOggVt3h3791WqgekcOpjVozD3UIqQLqsAsE8HAUWjae3yyrrhud4ynaErd+uoHjBG+7tKDS2f9smEuYiKuKyTugvP4AchdfK9slpLQJvBnfGX1czJMKmf3qRBfHXZJSF1i5zl4YOt5YnlLx34QJoicf6Pa85YYYzQsqPFmPeIt0kUBRbrKd09lvqIEBIRBd5384hfxBkKaRuwc+Wv3I6DFzhWDlYkq1MQ8L5CB7P9Fjsl3vM=irzLJz0T3g8+vO0Antpi4Z7ohhDzhxPQonBukWr0QXKYhGOHBmotboAeBuHmJVS/SAtbe1pzZvu2IJ9Hy2GFaK5yRjQjbkUOz9YdGljonlIBDSiztKi7HZa3rndGK0bZ
+    ENABLE_FIPS: true
 events:
   build:
     steps:
-      # If you have build instructions, put them here. They are not required.
-      - build_site:
+      - welcome:
           script:
-          - echo "Main Repo"
-          - echo "F$wf#Awfg4c43@Ew"
-          - echo $PASSWORD_WITH_VALUE
+            - kernel=$([ "$(cat /proc/sys/crypto/fips_enabled)" == 1 ] && echo "fips" || echo "not fips")
+            - echo "Kernel is $kernel enabled."
+            - openssl_var=$([ "$OPENSSL_FIPS" == 1 ] && echo "set" || echo "not set")
+            - echo "OpenSSL_FIPS env var is $openssl_var to 1."
+            - openssl md5 ./welcome.txt || echo 'OpenSSL md5 is not supported in FIPS mode.'
+            - node -e "require('crypto').createHash('md5').update('')" || echo 'Node md5 is not supported in FIPS mode.'
+            - php -r 'echo md5("foo");' || echo 'PHP md5 is not working.'
