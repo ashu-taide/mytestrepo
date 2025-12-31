@@ -28,8 +28,8 @@ events:
     steps:
       - check-for-variable:
         script:
-        - echo "fail on build"
-        - echo $COMPOSER_AUTH
+          - echo "fail on build"
+          - echo $COMPOSER_AUTH
   pr-merged:
     steps:
       - prmerged:
