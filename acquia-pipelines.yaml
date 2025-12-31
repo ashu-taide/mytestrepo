@@ -15,7 +15,6 @@ events:
       - build_site:
           script:
             - echo "passing job"
-            - exit 1
   post-deploy:
     steps:
       # If you have build instructions, put them here. They are not required.
@@ -23,7 +22,6 @@ events:
           script:
             - echo "passing job"
             - echo $COMPOSER_AUTH
-            - exit 1
   fail-on-build:
     steps:
       - check-for-variable:
