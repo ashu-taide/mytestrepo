@@ -2,9 +2,7 @@ version: 1.2.0
 services:
   - php:
       version: 8.2
-variables:
-  global:
-    ENABLE_FIPS: true
+
 events:
   build:
     steps:
