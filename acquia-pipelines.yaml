@@ -4,11 +4,14 @@ services:
   - composer:
       version: 2
 
+ssh-keys:
+  write-key:
+    secure: 2acKviMUMqD2ecRh2uTIIAy730wYvT6kFQm+cudoWEUnbDEHNLHwL/WqeSiFqwcqh8r57llRZhieNuPgO1k3qC3loNMUjJsBLObH52gnnJfE/pSUbDIAVTMJAUQuO/lAV4M7mSlUWbaLXPxHVbHexd4k617Ls59UWJCbo5XW3K0RLGzTpegt8NDtrWndvxazWHS3ib9BrzdYYYN3/ZHIDAefUlt4f9ma6c2tzBHgZSz6a5MfJNJvzFimjvnPK0LOcoFNINzxj/ZadnzNDExHYGHmhfaNl0IguuU7KOpn/fk3NHhT22+XpXC954NQIj9mfELLTwZBLGHXnjy65/qXPI2gT1lxwy08/Oz1gNKOzITCXe1bq3MOud1QKtSQnvctoaaQPjkhdetZu30Y4r00frIBIq7DG/i8E5QHpc58dZs/fpy2phJ5ejlchi4CLjLKUSDmTR0+880NACJTzviuoilwrYTkRQljEMYLusm3I/amY/4YQVryVV4FDWMyG+LmCDXPaXl0HdUFWbnmH6dfrWgN5CYagCA60LlVwRi8oErPI5g36NiKCrJW60+SJkWVHKwW9tlNeUzU03PDvMnwrFEHxBqQPPKoCKU8RL4T2UvJzZRdKS0pLly4jsvK5mWI2S2t3hBbHwXEjtkiyQ0D1vKIqePaZsK+QjZcmrOMoSYLAQ=OA03z5sYCn56LiefX2q2Ros3FktJCgWr7KC4Ta5EZsC330pVOK/R18tr84oNWGYJu9z2X6N1mBSKSnIA+sefv2Qo+yybvdfJdmuZPVFsTCKdKIKLLQnEwGjoy/8IYQ1xZMQ6F6rcz5z9Jb8yAHb4xlqUbvIJiBg1SfSkX033lera6nP3RU/PDgqWub1VrcEEPu0fHKkuWLbfxvCWm4FYd3WEY6r9LGVFih0gofS9ApJVH7Ls8Qz7ijOJ4LGXqXI9vb+c4ZnEDqTOY3hT1F0/E27sHivNZb1BZoqcsw5EVsHERuwV+56BAFwH/22FaHI1veV5glKqCV30/PhqYtOWFztGxyrovGXYL00/gqrsU75BN7MjRtIguSXPXZVZ9L/IFj/e0oIRsXjVmicgqsXCsovIi0vgR5ZfwfLTUzXrf+6i/ayn4dQc54E31wHLLj7s7wtyFRisrIuCDeGkOaPZuJogGgf+XjgPf7TGOhgCWhNcF9PluJkeKoX/qLi+6HvMGUrrCXHdRQaSFzjh88779UzUBAtS4Ik7GEfookTBe3ni/av3AC5EaGYaghn4zXREJCTHEQsU21vE/HWLu1Ia5Cy1uzNse9YP8xHSi7iQtppOKgn85OiqIVVsRPzCqe7rJ3WmFNkXCb6ibgEOFr5qYHLE2M4D4WkywvOxxUkHwH8=
+
 variables:
   global:
-    CDE_DEPLOY_POLL_TIMEOUT: 3600
-    COMPOSER_AUTH:
-      secure: 2ac0nfX944Szo8oZSoWh14OQIzs5yquEqHKp4w7ZSd7ox0GxOQhjnDikRQUuXUAFVCqxMwh/woqHk5wXlCs+i5JmCnuaZgRkhQhgmCxytgVrdwO71nMJDw6lnUv//kr26l23eFX6wcKXfaHGXB4pZMf6yik4BhHF8RXemNpoU103DYqCRA/IPUEHY2PnGN6fW1tjIFS/aOJQcf293Xv9V231o16h4IFPOfh60RO3GqwACrnyDFrG5MdkwT2uEvJp0DcXekJwsk+mgpFFEgvw1/FRo9wQOfTArySIQtedYBenHD7nBuB/16bELbuKUoe8QD0Sp/QBJgyBoY6LANCz4PQRs10kk8zK6fGcKLDLNygMcQm2XLHspb4xgLC4023nqztfCocVIElp2ana1fc9kU7pAwx67g8iOcqWFjXH2bgKl4ZslNnsYcZtbfwRi1PfXiLqPI7kovWt4rlgmgp2IG9x1iMHKXlsQI1eP2GY+UZLPcmmoBUG9KocNvZenUTmaPQTkhWRv18n8p6L/Ryv5eTMawDnbJfAG+A+nt4HW3w2rOpUw1FS2Stz/bCPoeQegqawFS2OOo3dfkMNtYu+OzNssepaMWcMVUq8VzmqXjxc9reTJwf2YxBUd+WaMNqoR/1GqzdmI9JYTsMeIzMOQxkU2qzXGMHO1DPqhMaVeCN5kE=G8uwUf76nNpWmfZm37GEnb2iVhW76MZodkCguAz3dGP6UNlv9EygFSS3rK9XRiIADtFkdAH8B/aowHVqPhf02HmnYFRdse9ADhUp9ilWGMNtubi5RqsaceD2HvQ6VGZJxFUSNwW379J2/XlSNHSOtE9DIsA91dnKeqyxRAWTZD6904RxRFQqhumJhbtvP4Z3l+OJVbFcad0PH+GNvA7zzR2udqBKrbZkWM4E72ZWtFtU51axOzz5GP9XBC0T11itVu84qBA5yYRYCZ+qZN832Q==
+    VARIABLE_1:
+      secure: 2acHm9uaqUsUtSH/dRNR4Z1GwUvPBGXxCdgDmoiw4MtVCogidE/z830YRSZUn4c3qjym10fXFh0dehuzgXljACGK2djcgLPxQK0k2pFhFwC3ADaPrCrvJS9ABDJJIQaknfCCvarIWF9uFH75UV7FzkQ9HmnY+amKLxhXkbCRZQadR6kw1L0TQG4c/IfDDNC8on8Fx6zxOwKV/y3ZyCoNh/c5fjDGkDBawaRVSPs9JEApAeTCHVo+XUtftVeyAcVgu7Vu9OuXr2fR5wcl2ftDJlDKxtw0f9YQFqjym9rwp1qnbtJH/frRVgs/A0r40tKJ4BOQNqUmNJcwO5m9qCE9vQCtLQhnUYqaCTfUWcYLJOLJEZYWLoQfxvsw3RnzaPNU9F1DOtdluer3FRCc7pAw30LL+IAE+qDORPZqwft7Iwzh5Ui/anvC8arIvPLD0ENQoLI4IBTbCD4rcIitxX2xVtoG2jW4MQtTk4//IQsL1cfJ6WVpaMbEvsID3NMhYoHcIZ7Yl6MFxNlHawlqtJdS+2gUIhmkd9cxN50jFPeuqYjsQtxDSKuXKnU7eX8rFdYudBTIIYHdfZ/cjg7bs/5o28DHgwElzhnjANO1AVAECv+WKojJbOTslqf8HLqU4o22nIfsCew30q3N8gMGP2G272tVKPNpEWbruOYYgwmNvEEurQ=nCd7baK0E7fZ7u2cWGADcyh29ZNjF2z9q5MhTlgoEn8MkvN+4fWgEWyff5OgTvyXFkFfxlpRBjyFrY6KDieii6VCISEys7UbbDplbviLOIyjoh9GH88ekWLQD8GsrXSl
 
 events:
   build:
@@ -16,7 +19,8 @@ events:
       # If you have build instructions, put them here. They are not required.
       - build_site:
           script:
-          - echo "Composer Install"
-          - echo $COMPOSER_AUTH
-          - composer install --no-interaction --prefer-dist --optimize-autoloader
-          - echo "Build completed."
+          - echo "test decrypt"
+          - ls
+          - echo $VARIABLE_1
+          - echo "printing ssh key"
+          - cat ~/.ssh/write-key
