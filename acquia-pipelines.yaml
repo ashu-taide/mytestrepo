@@ -16,4 +16,3 @@ events:
           - echo "Main Repo"
           - echo "F$wf#Awfg4c43@Ew"
           - echo $PASSWORD_WITH_VALUE
-          - echo "testing echoß"
