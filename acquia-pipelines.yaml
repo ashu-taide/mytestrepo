@@ -6,5 +6,4 @@ events:
       # If you have build instructions, put them here. They are not required.
       - build_site:
           script:
-            - sh -ec 'command -v make >/dev/null 2>&1'
-            - sh -ec 'out=$(make --no-print-directory ci-make-check) && [ "$out" = "MAKE_OK" ]'
+            - sh 'out=$(make --no-print-directory ci-make-check) && [ "$out" = "MAKE_OK" ]'
