@@ -1,29 +1,29 @@
 php|7.4.33|
 php7.4|7.4.33|
 acquia-yaml|1.0.4|gem list acquia-yaml
-composer|2.8.6|
+composer|2.9.5 2026-01-29 11:40:53|
 composer1||
 composer2|2.8.6|
 ssh|OpenSSH_8.2p1|ssh -V 2>&1
 rsync|3.1.3|
-node|18.20.7|
+node|v20.20.2|
 git|2.25.1|
 unzip|6.00|unzip -v
 bzip2|1.0.8|bzip2 --version 2>&1 | head -n1
-gem|3.6.5|
-npm|10.9.2|
+gem|4.0.9|
+npm|11.12.0|
 drush|0.10.2|
 drush8|8.5.0|
 wget|1.20.3|
-mysql|5.7.44|
+mysql|8.0.43-34|
 memcached|1.5.22|apt-cache show memcached
 patch|2.7.6|
-nvm|0.40.1|
+nvm|0.40.3|
 google-chrome|111.0.5563.146|
 rbenv|1.3.2|
 rbenv 2.7.x||rbenv versions
 rbenv 3.0.x||rbenv versions
-bundler|2.6.5|bundle --version
+bundler|4.0.9|bundle --version
 fontconfig|2.13.1|fc-list --version 2>&1
 imagemagick|6.9.10-23|convert --version 2>&1
 php extension pcntl||
