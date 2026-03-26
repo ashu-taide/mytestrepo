@@ -10,7 +10,7 @@ events:
             - 'echo "Checking php extension versions..."'
             - 'php $SOURCE_DIR/check-php-extensions-versions.php'
             - 'php7.4 $SOURCE_DIR/check-php-extensions-versions.php'
-            - 'php8.1 $SOURCE_DIR/check-php-extensions-versions.php'
+            - 'php8.2 $SOURCE_DIR/check-php-extensions-versions.php'
             # Fail this test if there were any failures.
             - 'if [ -f /tmp/version_check_failure ]; then'
             -   'echo "Failures in the version check:"'
